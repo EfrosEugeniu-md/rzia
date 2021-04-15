@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class BlogControler {
+public class BlogController {
     @GetMapping(value = {"blog.html"})
     public ModelAndView viewHome() {
         ModelAndView modelAndView = new ModelAndView();
