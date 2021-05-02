@@ -19,9 +19,9 @@ public class ProviderServiceImpl implements ProviderService {
     @Autowired
     public ProviderServiceImpl(ProviderRepository repository) {
         this.repository = repository;
-        for (Provider provider : ConsumerUtil.providers) {
-            repository.save(provider);
-        }
+//        for (Provider provider : ConsumerUtil.providers) {
+//            repository.save(provider);
+//        }
 
     }
 

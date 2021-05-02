@@ -21,7 +21,6 @@ public class ListController {
     @GetMapping(value = {"list.html"})
     public ModelAndView viewHome() {
         ModelAndView modelAndView = new ModelAndView();
-        int a = 5;
         modelAndView.addObject("list", stationService.findAll());
         modelAndView.setViewName("list");
         return modelAndView;

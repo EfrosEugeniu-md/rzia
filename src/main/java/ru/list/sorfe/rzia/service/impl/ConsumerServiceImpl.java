@@ -20,11 +20,11 @@ public class ConsumerServiceImpl implements ConsumerService {
     @Autowired
     public ConsumerServiceImpl(ConsumerRepository repository, StationService stationService) {
         this.repository = repository;
-        for (Consumer consumer : ConsumerUtil.consumers) {
-            consumer.setStation(
-                    stationService.findById(consumer.getTpIc().getTpNumber()));
-            repository.save(consumer);
-        }
+//        for (Consumer consumer : ConsumerUtil.consumers) {
+//            consumer.setStation(
+//                    stationService.findById(consumer.getTpIc().getTpNumber()));
+//            repository.save(consumer);
+//        }
 
     }
 

@@ -20,11 +20,11 @@ public class TransServiceImpl implements TransService {
     public TransServiceImpl(TransRepository transRepository, StationAndCellularService stationAndCellularService) {
 
         this.transRepository = transRepository;
-        for (TransformationCurrent transformationCurrent : StationUtil.transList){
-            transformationCurrent.setStationAndCellular(
-                    stationAndCellularService.findById(transformationCurrent.getId().getTpIc()));
-            transRepository.save(transformationCurrent);
-        }
+//        for (TransformationCurrent transformationCurrent : StationUtil.transList){
+//            transformationCurrent.setStationAndCellular(
+//                    stationAndCellularService.findById(transformationCurrent.getId().getTpIc()));
+//            transRepository.save(transformationCurrent);
+//        }
 
     }
 

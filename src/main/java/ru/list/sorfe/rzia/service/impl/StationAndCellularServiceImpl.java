@@ -17,14 +17,13 @@ public class StationAndCellularServiceImpl implements StationAndCellularService 
     private final StationAndCellularRepository stationAndCellularRepository;
 
     @Autowired
-    public StationAndCellularServiceImpl(StationAndCellularRepository stationAndCellularRepository,
-                                         StationService stationService) {
+    public StationAndCellularServiceImpl(StationAndCellularRepository stationAndCellularRepository) {
         this.stationAndCellularRepository = stationAndCellularRepository;
-        for (StationAndCellular stationAndCellular : StationUtil.stCellHashSet) {
-            stationAndCellular.setStation(
-                    stationService.findById(stationAndCellular.getId().getTpNumber()));
-            this.stationAndCellularRepository.save(stationAndCellular);
-        }
+//        for (StationAndCellular stationAndCellular : StationUtil.stCellHashSet) {
+//            stationAndCellular.setStation(
+//                    stationService.findById(stationAndCellular.getId().getTpNumber()));
+//            this.stationAndCellularRepository.save(stationAndCellular);
+//        }
 
     }
 

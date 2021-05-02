@@ -20,7 +20,7 @@ public class CabelServiceImpl implements CabelService {
     @Autowired
     public CabelServiceImpl(CabelRepository repository) {
         this.repository = repository;
-        for (Cabel cabel : ConsumerUtil.cabels) repository.save(cabel);
+//        for (Cabel cabel : ConsumerUtil.cabels) repository.save(cabel);
 
     }
 

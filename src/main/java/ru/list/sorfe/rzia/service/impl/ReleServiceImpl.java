@@ -19,17 +19,17 @@ public class ReleServiceImpl implements ReleService {
     @Autowired
     public ReleServiceImpl(ReleRepository releRepository, StationAndCellularService stationAndCellularService) {
         this.releRepository = releRepository;
-        try {
-            for (Rely rely : StationUtil.releList) {
-                rely.setStationAndCellular(
-                        stationAndCellularService.findById(rely.getId().getTpIc()));
-
-                releRepository.save(rely);
-            }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            for (Rely rely : StationUtil.releList) {
+//                rely.setStationAndCellular(
+//                        stationAndCellularService.findById(rely.getId().getTpIc()));
+//
+//                releRepository.save(rely);
+//            }
+//
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
     @Override
