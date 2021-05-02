@@ -23,7 +23,4 @@ public class Station {
     private List<StationAndCellular> stationAndCellulars = new ArrayList<>();
     @OneToMany(mappedBy = "station", fetch = FetchType.LAZY)
     private List<Consumer> consumers = new ArrayList<>();
-//    @OneToMany(mappedBy = "stationAndCellular", fetch = FetchType.LAZY)
-//    private List<TransformationCurrent> transformationCurrents = new ArrayList<>();
-
 }

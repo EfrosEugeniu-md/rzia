@@ -1,14 +1,12 @@
 package ru.list.sorfe.rzia.beans;
 
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Embeddable;
 import java.io.Serializable;
 
-@Data
+@Getter
+@Setter
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @Embeddable
@@ -19,5 +17,10 @@ public class TpIc implements Serializable {
 
     public static enum TypeOfStation {
         CRP, RP, TP
+    }
+
+    public String toString() {
+
+        return tpType.toString() + tpNumber.toString() + " cellular nr. " + ic.toString();
     }
 }

@@ -16,6 +16,6 @@ public class TransTipGod {
     private final int ageManufacturing;
 
     public static enum TypeOfTransfCurent {
-        TPFM10, TPLM10, TPL10, TLM10, TOL10, TVLM10, TLK10, ABB
+        TPFM10, TPLM10,  TLM10, TOL10, TVLM10, ABB,TPL10, TLK10
     }
 }

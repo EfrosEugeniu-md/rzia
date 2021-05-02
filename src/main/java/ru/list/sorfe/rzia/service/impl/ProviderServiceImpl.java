@@ -18,8 +18,8 @@ public class ProviderServiceImpl implements ProviderService {
 
     @Autowired
     public ProviderServiceImpl(ProviderRepository repository) {
-        this.repository = repository;for (Provider provider : ConsumerUtil.providers) {
-            log.debug(provider.toString());
+        this.repository = repository;
+        for (Provider provider : ConsumerUtil.providers) {
             repository.save(provider);
         }
 

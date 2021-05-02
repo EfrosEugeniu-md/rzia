@@ -13,4 +13,3 @@ public class HomeController {
         return modelAndView;
     }
 }
-//blog-single.html

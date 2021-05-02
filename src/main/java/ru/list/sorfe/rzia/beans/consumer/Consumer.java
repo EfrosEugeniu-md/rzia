@@ -1,15 +1,13 @@
 package ru.list.sorfe.rzia.beans.consumer;
 
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import ru.list.sorfe.rzia.beans.Station;
 import ru.list.sorfe.rzia.beans.TpIc;
 
 import javax.persistence.*;
 
-@Data
+@Getter
+@Setter
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @Entity
@@ -44,4 +42,10 @@ public class Consumer {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tpNumber_st", referencedColumnName = "tpNumber")
     private Station station;
+
+    @Override
+    public String toString() {
+
+        return "Consumer is " + this.id.toString() + "whit " + this.x.getNumberOfAggregates() + "Aggregates.";
+    }
 }

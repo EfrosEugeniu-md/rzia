@@ -1,0 +1,94 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head></head>
+<body>
+
+<!--    <div th:fragment="institute">-->
+<!--        <div ng-controller="InstituteController" class="modal fade" id="instituteModal"-->
+<!--             tabindex="-1" role="dialog" aria-labelledby="instituteModal">-->
+<!--            <div class="modal-dialog" role="document">-->
+<!--                <div class="modal-content">-->
+<!--                    <div class="modal-header">-->
+<!--                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+<!--                                aria-hidden="true">&times;</span></button>-->
+<!--                        <h4 class="modal-title"><span th:text="#{institute.modal.label}"></span></h4>-->
+<!--                    </div>-->
+<!--                    <div class="modal-body" style="max-height: 450px; overflow-y: scroll;">-->
+<!--                        <div class="row">-->
+<!--                            <table class="table table-condensed table-hover user-table" style="margin-bottom: 0px;">-->
+<!--                                <tr>-->
+<!--                                    <th th:text="#{institute.code.label}"></th>-->
+<!--                                    <th th:text="#{institute.description.label}"></th>-->
+<!--                                </tr>-->
+<!--                                <tr>-->
+<!--                                    <th><input type="text" ng-model="searchCode" class="form-control"/></th>-->
+<!--                                    <th><input type="text" ng-model="searchDescription" class="form-control"/></th>-->
+<!--                                </tr>-->
+<!--                                <tr data-ng-click="setSelectedRow(institute.code)"-->
+<!--                                    data-ng-dblclick="setInstitute(institute.code)"-->
+<!--                                    data-ng-class="selectedRow == institute.code ? 'info' : ''"-->
+<!--                                    data-ng-repeat="institute in allInstitutes | filter :{ 'code' : searchCode, 'description' : searchDescription} | orderBy : 'code' ">-->
+<!--                                    <td ng-bind="institute.code"></td>-->
+<!--                                    <td ng-bind="institute.description"></td>-->
+<!--                                </tr>-->
+<!--                            </table>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="modal-footer">-->
+<!--                        <button type="button" class="btn btn-primary" data-ng-click="addInstituteBySelectedRow()">-->
+<!--                            <span th:text="#{btn.ok.label}"></span>-->
+<!--                        </button>-->
+<!--                        <button type="button" class="btn btn-primary" data-dismiss="modal">-->
+<!--                            <span th:text="#{btn.close.label}"></span>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div th:fragment="branch">-->
+<!--        <div ng-controller="BranchController" class="modal fade" id="branchModal"-->
+<!--             tabindex="-1" role="dialog" aria-labelledby="branchModal">-->
+<!--            <div class="modal-dialog" role="document">-->
+<!--                <div class="modal-content">-->
+<!--                    <div class="modal-header">-->
+<!--                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+<!--                                aria-hidden="true">&times;</span></button>-->
+<!--                        <h4 class="modal-title"><span th:text="#{branch.modal.label}"></span></h4>-->
+<!--                    </div>-->
+<!--                    <div class="modal-body" style="max-height: 450px; overflow-y: scroll;">-->
+<!--                        <div class="row">-->
+<!--                            <table class="table table-condensed table-hover user-table" style="margin-bottom: 0px;">-->
+<!--                                <tr>-->
+<!--                                    <th th:text="#{branch.code.label}"></th>-->
+<!--                                    <th th:text="#{branch.description.label}"></th>-->
+<!--                                </tr>-->
+<!--                                <tr>-->
+<!--                                    <th><input type="text" ng-model="searchCode" class="form-control"/></th>-->
+<!--                                    <th><input type="text" ng-model="searchDescription" class="form-control"/></th>-->
+<!--                                </tr>-->
+<!--                                <tr data-ng-click="setSelectedRow(branch.code)"-->
+<!--                                    data-ng-dblclick="setBranch(branch.code)"-->
+<!--                                    data-ng-class="selectedRow == branch.code ? 'info' : ''"-->
+<!--                                    data-ng-repeat="branch in allBranches | filter :{ 'code' : searchCode, 'description' : searchDescription} | orderBy : code ">-->
+<!--                                    <td ng-bind="branch.code"></td>-->
+<!--                                    <td ng-bind="branch.description"></td>-->
+<!--                                </tr>-->
+<!--                            </table>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="modal-footer">-->
+<!--                        <button type="button" class="btn btn-primary" data-ng-click="addBranchBySelectedRow()">-->
+<!--                            <span th:text="#{btn.ok.label}"></span>-->
+<!--                        </button>-->
+<!--                        <button type="button" class="btn btn-primary" data-dismiss="modal">-->
+<!--                            <span th:text="#{btn.close.label}"></span>-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+</body>
+</html>

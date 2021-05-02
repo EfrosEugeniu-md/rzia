@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en"
+      layout:decorator="layout/layout">
+
+<head th:replace="fragments/component :: header"></head>
+<body>
+<div th:replace="fragments/componentBody :: header_s"></div>
+
+<div class="main-container">
+
+    <!-- Page Banner -->
+    <div class="container-fluid no-left-padding no-right-padding page-banner error-banner">
+        <!-- Container -->
+        <div class="container">
+            <div class="page-title">
+                <h3>Blog</h3>
+            </div>
+            <ol class="breadcrumb">
+                <li><a href="index.html">home</a></li>
+                <li><a href="blog.html">blog</a></li>
+                <li class="active">post name</li>
+            </ol>
+        </div><!-- Container /- -->
+    </div><!-- Page Banner /- -->
+
+    <main class="site-main">
+
+        <!-- Blog -->
+        <div class="container-fluid no-left-padding no-right-padding blog-post">
+            <!-- Container -->
+            <div class="container">
+                <!-- Row -->
+                <div class="row">
+                    <!-- Content Area -->
+                    <div class="col-md-9 col-sm-8 content-area">
+                        <article class="type-post">
+                            <div class="entry-cover">
+<!--                                <img src="/assets/images/blog-post-1.jpg" alt="Blog"/>-->
+<!--                                <div class="post-meta">-->
+<!--                                    <a href="#"><span th:text="${station.getTpNumber()}">18</span>ST</a>-->
+<!--                                </div>-->
+                            </div>
+                            <div class="entry-content">
+                                <div class="entry-header">
+                                    <h3 class="entry-title"><a href="#">Traction substation <span th:text="${station.getTpNumber()} + ' ST'"></span> </a></h3>
+                                    <div class="entry-meta">
+                                        <span><i class="fa fa-user-o"></i><a href="#">
+                                            <span th:text="${station.getConsumers().size()} + ' providers'">
+                                                4 Comments</span> </a></span>
+                                        <span><i class="fa fa-clock-o"></i><a href="#"><span
+                                                th:text="${station.getStationAndCellulars().size()} + ' providers'">
+                                                4 Comments</span></a></span>
+                                        <span><i class="fa fa-commenting-o"></i><a href="#">2 comments</a></span>
+                                    </div>
+                                </div>
+                                <p>Traction substation - an electrical installation designed to lower the electrical
+                                    voltage and then
+                                    convert (rectify) the current (for DC substations) in order to transfer it to the
+                                    contact network to provide electrical energy to electric locomotives, electric
+                                    trains,
+                                    trams and trolleybuses. Traction substations are of direct and alternating
+                                    current.</p>
+                                <p>Traction substations for trams and trolley buses are used to convert three-phase
+                                    alternating
+                                    current (usually 6 or 10 kV) into direct current. DC voltage for urban electric
+                                    transport
+                                    in most cities of the world is accepted: on the pantograph of tram and trolleybus
+                                    550 V,
+                                    on the buses of traction substations 600 V.
+                                    Traction substations are powered by 6 or 10 kV overhead or cable lines from the
+                                    power system.</p>
+                            </div>
+                            <div class="tags-share-block">
+                                <div class="tags">
+                                    <span>Tags :</span>
+                                    <a href="#" title="Cellulars">Cellulars</a>
+                                    <a href="#" title="Consumer">Consumer</a>
+                                    <a href="#" title="Providers">Providers</a>
+                                </div>
+                                <div class="share-block">
+                                    <a href="#" title="Share"><i class="fa fa-share"></i> Share</a>
+                                </div>
+                            </div>
+                            <div class="about-author">
+                                <i><img src="/assets/images/about-author.jpg"
+                                        alt="Author"/></i>
+                                <h3>About the Station</h3>
+                                <p>This is Station <strong><span th:text="'ST'+${station.getTpNumber()}"></span>
+                                </strong>, the substation is powered by<strong> <span
+                                        th:text="${station.getConsumers[0].getProvider().getPower()}"></span>
+                                    kV.</strong>
+                                    The number of rectifying units is equal to <strong><span
+                                            th:text="${station.getConsumers[0].getX().getNumberOfAggregates()}"></span>
+                                    </strong> the consumed current <strong><span
+                                            th:text="${station.getConsumers[0].getX().getCurrentOfAggregates()}+' A'"></span>
+                                    </strong> of each</p>
+                            </div>
+                        </article>
+
+
+                        <div id="providers" class="comments-area">
+                            <h2 class="comments-title">Providers</h2>
+                            <ol class="comment-list" th:each="consumer: ${station.getConsumers()}">
+                                <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1 parent">
+                                    <div class="comment-body">
+                                        <footer class="comment-meta">
+                                            <div class="comment-author vcard">
+                                                <img alt="img" src="/assets/images/comment-11.jpg"
+                                                     class="avatar avatar-72 photo"/>
+                                                <b class="fn"><span th:text="${consumer.getProvider().getId().getTpType()}
+                                                + ${consumer.getProvider().getId().getTpNumber()} + ' , '
+                                                + ${consumer.getProvider().getId().getIc()} + ' cellul.'"></span></b>
+                                            </div>
+                                            <div class="comment-metadata">
+                                                <a href="#">document</a>
+                                            </div>
+                                        </footer>
+                                        <div class="comment-content">
+                                            <p>The supply of electricity is carried out by means of a cable
+                                                <strong><span th:text="${consumer.getCabel().getL()}"></span></strong> m
+                                                long a
+                                                and with a cross-section of <strong><span
+                                                        th:text="${consumer.getCabel().getS()}"></span></strong> mm
+                                                square,
+                                                the line is protected: </p>
+                                            <p th:if="${consumer.getProvider().getTo()}!=0">
+                                                <strong>by a current cutoff</strong> with parameters of <strong><span
+                                                    th:text="${consumer.getProvider().getTo()}"></span></strong>
+                                            </p>
+                                            </p>
+                                            <p th:if="${consumer.getProvider().getMtzT()}!=0">
+                                                <strong>by overcurrent protection</strong> with a current value of
+                                                <strong><span
+                                                        th:text="${consumer.getProvider().getMtzI()}"></span></strong>
+                                                amperes
+                                                and a response time of <strong><span
+                                                    th:text="${consumer.getProvider().getMtzT()}"></span></strong>
+                                                seconds..</p>
+                                            </p>
+                                        </div>
+                                        <div class="reply">
+                                            <a href="#">10 Likes</a>
+                                            <a rel="nofollow" class="comment-reply-link" href="#">Reply</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol><!-- .comment-list -->
+                        </div>
+
+
+                        <div id="celulas" class="comments-area">
+                            <h2 class="comments-title">Cellulars</h2>
+                            <ol class="comment-list" th:each="cellula: ${station.getStationAndCellulars()}">
+                                <li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1 parent">
+                                    <div class="comment-body">
+                                        <footer class="comment-meta">
+                                            <div class="comment-author vcard">
+                                                <img alt="img" src="/assets/images/comment-12.jpg"
+                                                     class="avatar avatar-72 photo"
+                                                     th:if="${cellula.getTypeOfSecurityElement().toString() == 'AGR'}"/>
+                                                <img alt="img" src="/assets/images/comment-11.jpg"
+                                                     class="avatar avatar-72 photo"
+                                                     th:if="${cellula.getTypeOfSecurityElement().toString() == 'TP'}"/>
+                                                <b class="fn"><span th:text="${cellula.getId().getTpType()}
+                                                + ${cellula.getId().getTpNumber()} + ' , '
+                                                + ${cellula.getId().getIc()} + ' cellul.' + ${cellula.getTypeOfSecurityElement()}"></span></b>
+                                            </div>
+                                            <div class="comment-metadata">
+                                                <a href="#">document</a>
+                                            </div>
+                                        </footer>
+                                        <div class="comment-content">
+                                            <p th:if="${cellula.getTypeOfSecurityElement().toString() == 'AGR'}">
+                                                This cell serve to power the aggregator number
+                                                <strong><span
+                                                        th:text="${cellula.getNumberOfSecurityElement()}">..</span></strong>
+                                            </p>
+                                            <p th:if="${cellula.getTypeOfSecurityElement().toString() == 'TP'}">
+                                                This cell serve to power the backup line to station number
+                                                <strong><span
+                                                        th:text="${cellula.getNumberOfSecurityElement()}">..</span></strong>
+                                            </p>
+                                            <ol th:each="tr:${cellula.getTransformationCurrents()}">
+                                                <il>
+                                                    <strong><span
+                                                            th:text="'Phase' + ${tr.getId().getPhase()}">..</span></strong>
+                                                    a current transformer is installed
+                                                    <strong><span
+                                                            th:text="'type: ' + ${tr.getTransTipGod().getTypeOfTransfCurent()} + ${tr.getKTr()*5} + '/5'">..</span></strong>
+                                                    number
+                                                    <strong><span th:text="'nr.: ' + ${tr.getIdTr()}">..</span></strong>
+                                                    year of manufacture
+                                                    <strong><span
+                                                            th:text="${tr.getTransTipGod().getAgeManufacturing()}">..</span></strong>
+                                                    and coefficient
+                                                    <strong><span th:text="'K= ' + ${tr.getKTr()}">..</span></strong>
+                                                </il>
+                                            </ol>
+
+                                            <ol th:each="rl:${cellula.getRelies()}">
+                                                <il>
+                                                    <p>
+                                                        <strong><span
+                                                                th:text="'Phase' + ${rl.getId().getPhase()}">..</span></strong>
+                                                        a current is installed rely
+                                                        <strong><span
+                                                                th:text="'type: ' + ${rl.getType()} ">..</span></strong>serving
+                                                        to ensure:
+                                                    </p>
+                                                    <p th:if="${rl.getMtzUstI()} != 0">
+                                                        as overcurrent protection, the operation value of which is
+                                                        <strong><span
+                                                                th:text="'Ireal= ' + ${rl.getMtzSrabI()} + ' A'">..</span></strong>
+                                                        at a setting of
+                                                        <strong><span
+                                                                th:text="'Inom= ' + ${rl.getMtzUstI()} + ' A'">..</span></strong>
+                                                        and an operation time of
+                                                        <strong><span
+                                                                th:text="'Treal= ' + ${rl.getMtzSrabT()} + ' seconds'">..</span></strong>
+                                                        at a setting of
+                                                        <strong><span
+                                                                th:text="'Tnom= ' + ${rl.getMtzUstT()} + ' seconds'">..</span></strong>
+                                                    </p>
+                                                    <p th:if="${rl.getToUstI()} != 0">
+                                                        as cut-off protection, the operation value of which is
+                                                        <strong><span
+                                                                th:text="'Ireal= ' + ${rl.getToSrabI()} + ' A'">..</span></strong>
+                                                        at a setting of
+                                                        <strong><span
+                                                                th:text="'Inom= ' + ${rl.getToSrabI()} + ' A'">..</span></strong>
+                                                    </p>
+                                                </il>
+                                            </ol>
+                                        </div>
+
+                                        <div class="reply">
+                                            <a href="#">10 Likes</a>
+                                            <a rel="nofollow" class="comment-reply-link" href="#">Reply</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol><!-- .comment-list -->
+                            <!-- Comment Form -->
+                            <div id="respond1" class="comment-respond">
+                                <h2 id="reply-title1" class="comment-reply-title">Post a Comment</h2>
+                                <form method="post" id="commentform1" class="comment-form">
+                                    <p class="comment-form-comment">
+                                        <textarea id="comment1" name="comment" rows="8"
+                                                  placeholder="Write your comment here" required="required"></textarea>
+                                    </p>
+                                    <p class="comment-form-author">
+                                        <input id="author1" name="author" placeholder="Your full name" size="30"
+                                               maxlength="245" required="required" type="text"/>
+                                    </p>
+                                    <p class="comment-form-email">
+                                        <input id="email1" name="email" placeholder="Email address" required="required"
+                                               type="email"/>
+                                    </p>
+                                    <p class="form-submit">
+                                        <input name="submit" class="submit" value="Submit" type="submit"/>
+                                    </p>
+                                </form>
+                            </div><!-- Comment Form /- -->
+                        </div>
+                    </div><!-- Content Area /- -->
+
+                    <!-- Widget Area -->
+                    <div class="col-md-3 col-sm-4 widget-area">
+                        <!-- Widget : Search -->
+                        <aside class="widget widget_search">
+                            <form method="get" class="searchform" action="#">
+                                <div class="input-group">
+                                    <input placeholder="Search Here" class="form-control" required="" type="text"/>
+                                    <span class="input-group-btn">
+											<button class="btn btn-default" type="submit"><i
+                                                    class="fa fa-search"></i></button>
+										</span>
+                                </div>
+                            </form>
+                        </aside><!-- Widget: Search /- -->
+
+
+                        <!-- Widget : Categories -->
+                        <aside id="categories" class="widget widget_categories">
+                            <h3 class="widget-title">Categories</h3>
+                            <ul>
+                                <li><a href="#">Egg Fryed Rice With Vegitable</a></li>
+                                <li><a href="#">Grill Chickentry Foodmanjuri</a></li>
+                                <li><a href="#">Fishfry Apilimied Dish</a></li>
+                                <li><a href="#">Intepsion California Epsia</a></li>
+                                <li><a href="#">Soadynegth Ofriaplat Disha</a></li>
+                            </ul>
+                        </aside><!-- Widget: Categories /- -->
+                        <!-- Widget : Recent Post -->
+
+
+                        <aside class="widget widget_recentposts">
+                            <h3 class="widget-title">Recent POSTS</h3>
+                            <div class="latest-content">
+                                <a href="#" title="Recent Posts"><i><img src="/assets/images/rcnt-1.png"
+                                                                         class="wp-post-image" alt="blog-1"></i></a>
+                                <h5><a title="Pellentesque suscipit ante at" href="#">Vintage bag designs for 2017</a>
+                                </h5>
+                                <span><a href="#">May 16, 2016</a></span>
+                            </div>
+                            <div class="latest-content">
+                                <a href="#" title="Recent Posts"><i><img src="assets/images/rcnt-2.png"
+                                                                         class="wp-post-image" alt="blog-1"></i></a>
+                                <h5><a class="tc_dark tc_green_h" title="Pellentesque suscipit ante at" href="#">Special
+                                    restaurant with nonveg porn</a></h5>
+                                <span><a href="#">June 09, 2016</a></span>
+                            </div>
+                            <div class="latest-content">
+                                <a href="#" title="Recent Posts"><i><img src="assets/images/rcnt-3.png"
+                                                                         class="wp-post-image" alt="blog-1"></i></a>
+                                <h5><a title="Pellentesque suscipit ante at" href="#">fishfried Chicken Qualit anjascan
+                                    food</a></h5>
+                                <span><a href="#">April  22, 2016</a></span>
+                            </div>
+                        </aside><!-- Widget : Recent Post -->
+                        <!-- Widget : Tags -->
+                        <aside class="widget widget_latesttweets">
+                            <h3 class="widget-title">Tags</h3>
+                            <div class="tagcloud">
+                                <a href="#" title="Food">food</a>
+                                <a href="#" title="Break fast & LUNCH">break fast & LUNCH</a>
+                                <a href="#" title="Drinks">Drinks</a>
+                                <a href="#" title="DINNER & EVENTS">DINNER & EVENTS</a>
+                                <a href="#" title="Serve">serve</a>
+                                <a href="#" title="Chef">chef</a>
+                                <a href="#" title="Blog">Blog</a>
+                            </div>
+                        </aside><!-- Widget : Tags /- -->
+                    </div><!-- Widget Area /- -->
+                </div><!-- Row /- -->
+            </div><!-- Container /- -->
+        </div><!-- Blog -->
+
+    </main>
+
+</div>
+
+
+<div th:replace="fragments/componentBody :: footer-main"></div>
+
+<div th:replace="fragments/componentBody :: js-include"></div>
+
+</body>
+</html>

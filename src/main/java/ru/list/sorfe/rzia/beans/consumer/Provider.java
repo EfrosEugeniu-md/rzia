@@ -1,9 +1,6 @@
 package ru.list.sorfe.rzia.beans.consumer;
 
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import ru.list.sorfe.rzia.beans.TpIc;
 
 import javax.persistence.Column;
@@ -11,7 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
-@Data
+@Getter
+@Setter
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @Entity
@@ -28,5 +26,8 @@ public class Provider {
     private final double kzMin;
     @OneToOne(mappedBy = "provider")
     private Consumer consumer;
+    public String toString() {
+        return "Provider is " + this.id + "from " + this.getConsumer().getId().toString() ;
+    }
 }
 

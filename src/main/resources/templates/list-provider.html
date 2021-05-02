@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/component :: header"></head>
+<body>
+<div th:replace="fragments/componentBody :: header_s"></div>
+
+<div th:each="cell: ${list}">
+    <p th:text="${cell.toString()}">....</p>
+</div>
+
+<div th:replace="fragments/componentBody :: footer-main"></div>
+
+<div th:replace="fragments/componentBody :: js-include"></div>
+
+</body>
+</html>

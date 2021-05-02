@@ -26,5 +26,31 @@ public class StationAndCellular {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tpNumber_id", referencedColumnName = "tpNumber")
     private Station station;
+
+    @Override
+    public String toString() {
+
+        assert this.id != null;
+        StringBuilder stringBuilder = (new StringBuilder("This is " + this.id.toString()));
+        if (this.typeOfSecurityElement == StCellRollPhasa.TypeOfSecurityElement.TP) {
+            stringBuilder.append("Security Element is  line off the reserve to ST").append(this.numberOfSecurityElement);
+        }
+
+        if (this.typeOfSecurityElement == StCellRollPhasa.TypeOfSecurityElement.AGR) {
+            stringBuilder.append("Security Element is aggregate nr.").append(this.numberOfSecurityElement);
+        }
+
+        stringBuilder.append("\n");
+
+        for (Rely rely : this.getRelies()) {
+            stringBuilder.append(rely.toString());
+        }
+
+        for (TransformationCurrent transformationCurrent : this.getTransformationCurrents()) {
+            stringBuilder.append(transformationCurrent.toString());
+        }
+
+        return stringBuilder.toString();
+    }
 }
 

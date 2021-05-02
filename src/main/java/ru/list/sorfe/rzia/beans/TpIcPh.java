@@ -20,4 +20,9 @@ class TpIcPh implements Serializable {
     public static enum TypeOfPhase {
         FA, FO, FC
     }
+    @Override
+    public String toString(){
+
+        return tpIc.toString()+" phase:"+phase.toString();
+    }
 }

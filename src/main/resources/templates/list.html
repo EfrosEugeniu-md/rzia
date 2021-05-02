@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en"
+      layout:decorator="layout/layout">
+
+<head th:replace="fragments/component :: header"></head>
+
+<body data-offset="200" data-spy="scroll" data-target=".ownavigation">
+
+<div th:replace="fragments/componentBody :: header_s"></div>
+
+<div class="main-container">
+
+    <!-- Page Banner -->
+    <div class="container-fluid no-left-padding no-right-padding page-banner error-banner">
+        <!-- Container -->
+        <div class="container">
+            <div class="page-title">
+                <h3>Blog</h3>
+            </div>
+            <ol class="breadcrumb">
+                <li><a href="index.html">home</a></li>
+                <li><a href="list.html">list</a></li>
+                <li class="active">list stations</li>
+            </ol>
+        </div><!-- Container /- -->
+    </div><!-- Page Banner /- -->
+
+    <main class="site-main">
+
+        <!-- Blog -->
+        <div class="container-fluid no-left-padding no-right-padding blog-post">
+            <!-- Container -->
+            <div class="container">
+                <!-- Row -->
+                <div class="row">
+                    <!-- Content Area -->
+                    <div class="col-md-9 col-sm-8 content-area">
+                        <div th:each="station: ${list}">
+                            <div class="type-post">
+                                <div class="entry-cover">
+                                    <!--										<a href="list-consumer.html">-->
+                                    <!--											<img src="assets/images/blog-post-1.jpg" alt="Blog" />-->
+                                    <!--										</a>-->
+                                    <!--                                    <div class="post-meta">-->
+                                    <!--                                        <a href="#"><span th:text="${station.getTpNumber()}">18</span>St.</a>-->
+                                    <!--                                    </div>-->
+                                </div>
+                                <div class="entry-content">
+                                    <div class="entry-header">
+                                        <h3 class="entry-title">
+                                            <a href="list-consumer.html"> Substatia de tractiune nr.
+                                                <span th:text="${station.getTpNumber()}">
+													...
+												</span>
+                                            </a></h3>
+                                        <div class="entry-meta">
+                                            <span><i class="fa fa-user-o"></i>
+												<a href="#">
+													<span th:text="${station.getConsumers().size()}">4 </span>Lines
+												</a></span>
+                                            <span><i class="fa fa-clock-o"></i><a href="#">1978 year</a></span>
+                                            <span><i class="fa fa-commenting-o"></i>
+												<a href="#">
+													<span th:text="${station.getStationAndCellulars().size()}">4 </span>Cellulars
+												</a></span>
+                                        </div>
+                                    </div>
+                                    <ol th:each="celula: ${station.getStationAndCellulars()}">
+                                        <li>
+                                            <a href="#">
+                                                <span th:text="${celula.getId().getIc()}">4 </span>Cellula
+                                            </a></span>
+                                        </li>
+                                    </ol>
+                                    <a th:href="@{'/list.html/' + ${station.getTpNumber()}}" >detail</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <nav class="ow-pagination">
+                            <ul class="pagination">
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                            </ul>
+                        </nav>
+                    </div><!-- Content Area /- -->
+
+                    <!-- Widget Area -->
+                    <div class="col-md-3 col-sm-4 widget-area">
+                        <!-- Widget : Search -->
+                        <aside class="widget widget_search">
+                            <form method="get" class="searchform" action="#">
+                                <div class="input-group">
+                                    <input placeholder="Search Here" class="form-control" required="" type="text"/>
+                                    <span class="input-group-btn">
+											<button class="btn btn-default" type="submit"><i
+                                                    class="fa fa-search"></i></button>
+										</span>
+                                </div>
+                            </form>
+                        </aside><!-- Widget: Search /- -->
+                        <!-- Widget : Categories -->
+                        <aside id="categories" class="widget widget_categories">
+                            <h3 class="widget-title">Categories</h3>
+                            <ul>
+                                <li><a href="#">Egg Fryed Rice With Vegitable</a></li>
+                                <li><a href="#">Grill Chickentry Foodmanjuri</a></li>
+                                <li><a href="#">Fishfry Apilimied Dish</a></li>
+                                <li><a href="#">Intepsion California Epsia</a></li>
+                                <li><a href="#">Soadynegth Ofriaplat Disha</a></li>
+                            </ul>
+                        </aside><!-- Widget: Categories /- -->
+                        <!-- Widget : Recent Post -->
+                        <aside class="widget widget_recentposts">
+                            <h3 class="widget-title">Recent POSTS</h3>
+                            <div class="latest-content">
+                                <a href="#" title="Recent Posts"><i><img src="assets/images/rcnt-1.png"
+                                                                         class="wp-post-image" alt="blog-1"></i></a>
+                                <h5><a title="Pellentesque suscipit ante at" href="#">Vintage bag designs for 2017</a>
+                                </h5>
+                                <span><a href="#">May 16, 2016</a></span>
+                            </div>
+                            <div class="latest-content">
+                                <a href="#" title="Recent Posts"><i><img src="assets/images/rcnt-2.png"
+                                                                         class="wp-post-image" alt="blog-1"></i></a>
+                                <h5><a class="tc_dark tc_green_h" title="Pellentesque suscipit ante at" href="#">Special
+                                    restaurant with nonveg porn</a></h5>
+                                <span><a href="#">June 09, 2016</a></span>
+                            </div>
+                            <div class="latest-content">
+                                <a href="#" title="Recent Posts"><i><img src="assets/images/rcnt-3.png"
+                                                                         class="wp-post-image" alt="blog-1"></i></a>
+                                <h5><a title="Pellentesque suscipit ante at" href="#">fishfried Chicken Qualit anjascan
+                                    food</a></h5>
+                                <span><a href="#">April  22, 2016</a></span>
+                            </div>
+                        </aside><!-- Widget : Recent Post -->
+                        <!-- Widget : Tags -->
+                        <aside class="widget widget_latesttweets">
+                            <h3 class="widget-title">Tags</h3>
+                            <div class="tagcloud">
+                                <a href="#" title="Food"> Cell.</a>
+                                <a href="#" title="Break fast & LUNCH">List of station</a>
+                                <a href="#" title="Drinks">Prov.</a>
+                                <a href="#" title="DINNER & EVENTS">List of transf.</a>
+                                <a href="#" title="Serve">Cons.</a>
+                                <a href="#" title="Blog">List of rely</a>
+                            </div>
+                        </aside><!-- Widget : Tags /- -->
+                    </div><!-- Widget Area /- -->
+                </div><!-- Row /- -->
+            </div><!-- Container /- -->
+        </div><!-- Blog -->
+
+    </main>
+
+</div>
+
+<div th:replace="fragments/componentBody :: footer-main"></div>
+
+<div th:replace="fragments/componentBody :: js-include"></div>
+
+</body>
+</html>

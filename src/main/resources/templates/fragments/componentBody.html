@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:fragment="header_s">
+    <!-- Loader -->
+    <div id="site-loader" class="load-complete">
+        <div class="loader">
+            <div class="line-scale">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div><!-- Loader /- -->
+
+    <a id="top"></a>
+    <!-- Header Section -->
+    <header class="header_s">
+        <!-- SidePanel -->
+        <div id="slidepanel">
+            <!-- Top Header -->
+            <div class="container-fluid no-right-padding no-left-padding top-header">
+                <!-- Container -->
+                <div class="container">
+                    <div class="top-left">
+                        <div class="lang-block">
+                            <select class="selectpicker" data-placeholder="Choose a Language...">
+                                <option value="EN">English</option>
+                                <option value="AF">Ру́сский</option>
+                                <option value="SQ">Romanii</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="logo-block">
+                        <a href="index.html" title="Logo"><span>P</span>restige</a>
+                    </div>
+                    <div class="top-right">
+<!--                        <span><a href="tel:18001234567">1800-123-4567</a></span>-->
+<!--                        <ul class="pages-dropdown">-->
+<!--                            <li class="dropdown">-->
+<!--                                <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true"-->
+<!--                                   aria-expanded="false">Pages</a>-->
+<!--                                <ul class="dropdown-menu">-->
+<!--                                    <li><a href="#" title="Page 1">Page 1</a></li>-->
+<!--                                    <li><a href="#" title="Page 2">Page 2</a></li>-->
+<!--                                    <li><a href="#" title="Page 3">Page 3</a></li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <div class="search">-->
+<!--                            <a href="javascript:void(0);" id="search" title="Search"><i class="fa fa-search"></i></a>-->
+<!--                        </div>-->
+                    </div>
+                    <!-- Search Box -->
+                    <div class="search-box">
+                        <span><i class="icon_close"></i></span>
+                        <form><input type="text" class="form-control" placeholder="Enter a keyword and press enter..."/>
+                        </form>
+                    </div><!-- Search Box /- -->
+                </div><!-- Container /- -->
+            </div><!-- Top Header /- -->
+
+        </div><!-- SidePanel /- -->
+        <!-- Menu Block -->
+        <div class="menu-block">
+            <!-- Container -->
+            <div class="container">
+                <!-- Ownavigation -->
+                <nav class="navbar ownavigation">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html"><span>P</span>restige</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/index.html" title="Home"
+                                   th:onclick="'setLinkToAnotherSection(\'' +  top+'\')'">Home</a></li>
+                            <li><a href="/index.html" title="Features"
+                                   th:onclick="'setLinkToAnotherSection(\'' +  features-section +'\')'">Features</a>
+                            </li>
+                            <li><a href="/index.html" title="Work"
+                                   th:onclick="'setLinkToAnotherSection(\'' +  gallery-section +'\')'">Work</a>
+                            </li>
+                            <li><a href="/index.html" title="Services"
+                                   th:onclick="'setLinkToAnotherSection(\'' +  services-section +'\')'">Services</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="/list.html" title="Blog" class="dropdown-toggle" role="button"
+                                   aria-haspopup="true" aria-expanded="false"
+                                   th:onclick="'setLinkToAnotherSection(\'' + '\')'">List</a>
+                                <i class="ddl-switch fa fa-angle-down"></i>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/list-cellular.html" title="Blog Single"
+                                           th:onclick="'setLinkToAnotherSection(\'' + '\')'">list-cellular</a></li>
+                                    <li><a href="/list-consumer.html" title="Blog Single"
+                                           th:onclick="'setLinkToAnotherSection(\'' + '\')'">list-consumer</a></li>
+                                    <li><a href="/list-provider.html" title="Blog Single"
+                                           th:onclick="'setLinkToAnotherSection(\'' + '\')'">list-providerr</a></li>
+                                    <li><a href="/list-relies.html" title="Blog Single"
+                                           th:onclick="'setLinkToAnotherSection(\'' + '\')'">list-relies</a>
+                                    </li>
+                                    <li><a href="/list-transformation.html" title="Blog Single"
+                                           th:onclick="'setLinkToAnotherSection(\''+ '\')'">list-transformation</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="/index.html" title="Pricing"
+                                   th:onclick="'setLinkToAnotherSection(\''+  pricing-section +'\')'">Pricing</a>
+                            </li>
+                            <li><a href="/index.html" title="About us"
+                                   th:onclick="'setLinkToAnotherSection(\''+  team-section +'\')'">About
+                                us</a></li>
+                            <li><a href="/index.html" title="Contact Us"
+                                   th:onclick="'setLinkToAnotherSection(\''+  footer-main +'\')'">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="loginpanel" class="desktop-hide">
+                        <div class="right" id="toggle">
+                            <a id="slideit" href="#slidepanel"><i class="fo-icons fa fa-inbox"></i></a>
+                            <a id="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>
+                        </div>
+                    </div>
+                </nav><!-- Ownavigation /- -->
+            </div><!-- Container /- -->
+        </div><!-- Menu Block /- -->
+    </header><!-- Header Section /- -->
+
+</div>
+
+<div th:fragment="footer-main">
+    <!-- Footer Main -->
+    <footer id="footer-main" class="container-fluid no-left-padding no-right-padding footer-main">
+        <!-- Top Footer -->
+        <div class="container-fluid no-left-padding no-right-padding top-footer">
+            <!-- Container -->
+            <div class="container">
+                <div class="logo-block">
+                    <h3><a href="#"><img src="assets/images/logo.png" alt="logo"/></a></h3>
+                    <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean
+                        sollicitudin, lorem quis bibendum auctor</p>
+                    <ul>
+                        <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#" title="Tumblr"><i class="fa fa-tumblr"></i></a></li>
+                        <li><a href="#" title="Vimeo"><i class="fa fa-vimeo"></i></a></li>
+                        <li><a href="#" title="Pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <!-- Widget Contact -->
+                    <div class="col-md-4 col-xs-6">
+                        <aside class="widget widget_contact">
+                            <h3 class="widget-title">Contact</h3>
+                            <div class="contact-tab">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#address" role="tab"
+                                                                              data-toggle="tab"><i
+                                            class="icon icon-Pointer"></i></a></li>
+                                    <li role="presentation"><a href="#email-add" role="tab" data-toggle="tab"><i
+                                            class="icon icon-Mail"></i></a></li>
+                                </ul>
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="address">
+                                        <p>123, New street Chicago, Northeastern Illinois</p>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="email-add">
+                                        <p><a href="tel:example@mail.com">example@mail.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div><!-- Widget Contact /- -->
+                    <!-- Widget Working Hours -->
+                    <div class="col-md-4 col-xs-6">
+                        <aside class="widget widget_working_hours">
+                            <h3 class="widget-title">Working Hours</h3>
+                            <p>This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit .</p>
+                            <p>mon - fri : 9.00 AM To 5.00 PM</p>
+                            <p>sat - sun : 11.00 AM To 3.00 PM</p>
+                        </aside>
+                    </div><!-- Widget Working Hours /- -->
+                    <!-- Widget Flicker -->
+                    <div class="col-md-4 col-xs-6">
+                        <aside class="widget widget_flickr">
+                            <h3 class="widget-title">Flickr Gallery</h3>
+                            <ul>
+                                <li><a href="#"><img src="assets/images/flicker-1.jpg" alt="Flicker"/></a></li>
+                                <li><a href="#"><img src="assets/images/flicker-2.jpg" alt="Flicker"/></a></li>
+                                <li><a href="#"><img src="assets/images/flicker-3.jpg" alt="Flicker"/></a></li>
+                                <li><a href="#"><img src="assets/images/flicker-4.jpg" alt="Flicker"/></a></li>
+                                <li><a href="#"><img src="assets/images/flicker-5.jpg" alt="Flicker"/></a></li>
+                                <li><a href="#"><img src="assets/images/flicker-6.jpg" alt="Flicker"/></a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <!-- Widget Flicker /- -->
+
+                </div><!-- Row /- -->
+            </div><!-- Container /- -->
+        </div><!-- Top Footer -->
+        <!-- Bottom Footer -->
+        <div class="container-fluid bottom-footer no-left-padding no-right-padding">
+            <!-- Container -->
+            <div class="container">
+                <p><i class="fa fa-copyright"></i> 2017 Prestige Theme. All Rights Reserved</p>
+            </div><!-- Container -->
+        </div><!-- Bottom Footer /- -->
+    </footer><!-- Footer Main /- -->
+</div>
+
+<div th:fragment="js-include">
+    <!-- JQuery v1.12.4 -->
+    <script src="/assets/js/jquery-1.12.4.min.js"></script>
+
+    <!-- Library - Js -->
+    <script src="/assets/js/lib.js"></script>
+
+    <!-- RS5.3 Core JS Files -->
+    <script type="text/javascript" src="/assets/revolution/js/jquery.themepunch.tools.min.js?rev=5.0"></script>
+    <script type="text/javascript" src="/assets/revolution/js/jquery.themepunch.revolution.min.js?rev=5.0"></script>
+    <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+
+    <!-- Library - Theme JS -->
+    <script src="/assets/js/functions.js"></script>
+    <script src="/assets/js/myFunctions.js"></script>
+</div>
+
+</body>
+</html>

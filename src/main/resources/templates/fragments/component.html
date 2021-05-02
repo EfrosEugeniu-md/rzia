@@ -1,0 +1,261 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="header">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Home - Prestige</title>
+
+    <!-- Standard Favicon -->
+
+
+    <!-- For iPhone 4 Retina display: -->
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-114x114-precomposed.png">
+
+    <!-- For iPad: -->
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-72x72-precomposed.png">
+
+    <!-- For iPhone: -->
+    <link rel="apple-touch-icon-precomposed" href="/assets/images/apple-touch-icon-57x57-precomposed.png">
+
+    <!-- Library - Google Font Familys -->
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat+Alternates:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Poppins:300,400,500,600,700|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Lato"
+          rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/assets/revolution/css/settings.css">
+
+    <!-- RS5.3 Layers and Navigation Styles -->
+    <link rel="stylesheet" type="text/css" href="/assets/revolution/css/layers.css">
+    <link rel="stylesheet" type="text/css" href="/assets/revolution/css/navigation.css">
+
+    <!-- Library -->
+    <link href="/assets/css/lib.css" rel="stylesheet">
+
+    <!-- Custom - Common CSS -->
+    <link href="/assets/css/plugins.css" rel="stylesheet">
+    <link href="/assets/css/elements.css" rel="stylesheet">
+    <link href="/assets/css/rtl.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <link id="color" href="/assets/css/color-schemes/default.css" rel="stylesheet"/>
+
+    <!--[if lt IE 9]>
+    <script src="/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+<!--    <link rel="icon" href="http://fototeg.ru/favicon.ico" type="image/x-icon"/>-->
+<!--    <link rel="shortcut icon" href="http://fototeg.ru/favicon.ico" type="image/x-icon"/>-->
+    <script src="http://localhost:35729/livereload.js"></script>
+
+</head>
+<body>
+<!-- Header Section -->
+<!--<div th:fragment="xxx">-->
+<!--    <header class="header_s">-->
+<!--        &lt;!&ndash; SidePanel 111111111111111111111111111111111111&ndash;&gt;-->
+<!--        <div id="slidepanel">-->
+<!--            &lt;!&ndash; Top Header &ndash;&gt;-->
+<!--            <div class="container-fluid no-right-padding no-left-padding top-header">-->
+<!--                &lt;!&ndash; Container &ndash;&gt;-->
+<!--                <div class="container">-->
+<!--                    <div class="top-left">-->
+<!--                        <div class="lang-block">-->
+<!--                            <select class="selectpicker" data-placeholder="Choose a Language...">-->
+<!--                                <option value="EN">Eng1111111lish</option>-->
+<!--                                <option value="AF">Albanian111111111</option>-->
+<!--                                <option value="SQ">German</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="logo-block">-->
+<!--                        <a href="index.html" title="Logo"><span>P</span>restige</a>-->
+<!--                    </div>-->
+<!--                    <div class="top-right">-->
+<!--                        <span><a href="tel:18001234567">1800-123-4567</a></span>-->
+<!--                        <ul class="pages-dropdown">-->
+<!--                            <li class="dropdown">-->
+<!--                                <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true"-->
+<!--                                   aria-expanded="false">Pages</a>-->
+<!--                                <ul class="dropdown-menu">-->
+<!--                                    <li><a href="#" title="Page 1">Page 1</a></li>-->
+<!--                                    <li><a href="#" title="Page 2">Page 2</a></li>-->
+<!--                                    <li><a href="#" title="Page 3">Page 3</a></li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                        <div class="search">-->
+<!--                            <a href="javascript:void(0);" id="search" title="Search"><i class="fa fa-search"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; Search Box &ndash;&gt;-->
+<!--                    <div class="search-box">-->
+<!--                        <span><i class="icon_close"></i></span>-->
+<!--                        <form><input type="text" class="form-control" placeholder="Enter a keyword and press enter..."/>-->
+<!--                        </form>-->
+<!--                    </div>&lt;!&ndash; Search Box /- &ndash;&gt;-->
+<!--                </div>&lt;!&ndash; Container /- &ndash;&gt;-->
+<!--            </div>&lt;!&ndash; Top Header /- &ndash;&gt;-->
+
+<!--        </div>&lt;!&ndash; SidePanel /- &ndash;&gt;-->
+<!--        &lt;!&ndash; Menu Block &ndash;&gt;-->
+<!--        <div class="menu-block">-->
+<!--            &lt;!&ndash; Container &ndash;&gt;-->
+<!--            <div class="container">-->
+<!--                &lt;!&ndash; Ownavigation &ndash;&gt;-->
+<!--                <nav class="navbar ownavigation">-->
+<!--                    <div class="navbar-header">-->
+<!--                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"-->
+<!--                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+<!--                            <span class="sr-only">Toggle navigation</span>-->
+<!--                            <span class="icon-bar"></span>-->
+<!--                            <span class="icon-bar"></span>-->
+<!--                            <span class="icon-bar"></span>-->
+<!--                        </button>-->
+<!--                        <a class="navbar-brand" href="index.html"><span>P</span>restige</a>-->
+<!--                    </div>-->
+<!--                    <div id="navbar" class="navbar-collapse collapse">-->
+<!--                        <ul class="nav navbar-nav">-->
+<!--                            <li class="active"><a href="#top" title="Home">Home</a></li>-->
+<!--                            <li><a href="#features-section" title="Features">Features</a></li>-->
+<!--                            <li><a href="#gallery-section" title="Work">Work</a></li>-->
+<!--                            <li><a href="#services-section" title="Services">Services</a></li>-->
+<!--                            <li class="dropdown">-->
+<!--                                <a href="list.html" title="Blog" class="dropdown-toggle" role="button"-->
+<!--                                   aria-haspopup="true" aria-expanded="false">List</a>-->
+<!--                                <i class="ddl-switch fa fa-angle-down"></i>-->
+<!--                                <ul class="dropdown-menu">-->
+<!--                                    <li><a href="list-cellular.html" title="Blog Single">list-cellular</a></li>-->
+<!--                                    <li><a href="list-consumer.html" title="Blog Single">list-consumer</a></li>-->
+<!--                                    <li><a href="list-provider.html" title="Blog Single">list-providerr</a></li>-->
+<!--                                    <li><a href="list-relies.html" title="Blog Single">list-relies</a></li>-->
+<!--                                    <li><a href="list-transformation.html" title="Blog Single">list-transformation</a>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
+<!--                            </li>-->
+<!--                            <li><a href="#pricing-section" title="Pricing">Pricing</a></li>-->
+<!--                            <li><a href="#team-section" title="About us">About us</a></li>-->
+<!--                            <li><a href="#footer-main" title="Contact Us">Contact</a></li>-->
+<!--                        </ul>-->
+<!--                    </div>-->
+<!--                    <div id="loginpanel" class="desktop-hide">-->
+<!--                        <div class="right" id="toggle">-->
+<!--                            <a id="slideit" href="#slidepanel"><i class="fo-icons fa fa-inbox"></i></a>-->
+<!--                            <a id="closeit" href="#slidepanel"><i class="fo-icons fa fa-close"></i></a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </nav>&lt;!&ndash; Ownavigation /- &ndash;&gt;-->
+<!--            </div>&lt;!&ndash; Container /- &ndash;&gt;-->
+<!--        </div>&lt;!&ndash; Menu Block /- &ndash;&gt;-->
+<!--    </header>&lt;!&ndash; Header Section /- &ndash;&gt;-->
+
+<!--</div>-->
+
+
+<!--<div th:fragment="top-buttons-standart-list">-->
+<!--    <div class="row" style="padding-bottom: 10px;">-->
+<!--        <div class="col-sm-6">-->
+<!--            <div class="btn-group">-->
+<!--                <button type="submit" value="search" name="ass-request" class="btn btn-primary">-->
+<!--                    <span th:text="#{btn.search.label}"></span>-->
+<!--                </button>-->
+<!--                <button type="submit" value="reset" name="ass-request" class="btn btn-primary">-->
+<!--                    <span th:text="#{btn.reset.label}"></span>-->
+<!--                </button>-->
+<!--                <button type="submit" value="reload" name="ass-request" class="btn btn-primary">-->
+<!--                    <span th:text="#{btn.reload.label}"></span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="col-sm-6 text-right">-->
+<!--            <div class="btn-group">-->
+<!--                <button type="submit" value="new" name="ass-request" class="btn btn-primary">-->
+<!--                    <span th:text="#{btn.new.label}"></span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div th:fragment="paginator-standart">-->
+<!--    <div class="row" data-ng-controller="PaginatorCtrl">-->
+<!--        <script th:inline="javascript">-->
+<!--            var tempTotalItems = [[${paginator.count}]];-->
+<!--            var tempCurrentPage = [[${paginator.page}]];-->
+<!--            var tempItemPerPage = [[${paginator.pageSize}]];-->
+<!--        </script>-->
+<!--        <div class="col-sm-4" th:with="start = ${paginator.page} * ${paginator.pageSize} - ${paginator.pageSize} + 1,-->
+<!--                                        finish = ${paginator.page} * ${paginator.pageSize},-->
+<!--                                        count = ${paginator.count}" th:if="${paginator.count > 0}">-->
+<!--            <p th:if="${finish} &gt; ${count}">-->
+<!--                <span th:text="#{paginator.total(${start}, ${count}, ${count})}"></span>-->
+<!--            </p>-->
+<!--            <p th:unless="${finish} &gt; ${count}">-->
+<!--                <span th:text="#{paginator.total(${start}, ${finish}, ${count})}"></span>-->
+<!--            </p>-->
+<!--        </div>-->
+<!--        <div class="col-sm-8 text-right" data-ng-show="totalItems > itemPerPage">-->
+<!--            <uib-pagination-->
+<!--                    total-items="totalItems" ng-model="currentPage" max-size="maxSize" items-per-page="itemPerPage"-->
+<!--                    ng-change="pageChanged()" class="pagination-sm" boundary-link-numbers="true" rotate="false"-->
+<!--                    previous-text="Previous" next-text="Next"></uib-pagination>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div th:fragment="top-buttons-standart-detail">-->
+<!--    <div class="row" style="padding-bottom: 10px;">-->
+<!--        <div class="col-sm-6">-->
+<!--            <button type="button" id="btnDelete" class="btn btn-danger" th:if="!${readonly}" onclick="confirmDelete()">-->
+<!--                <span th:text="#{btn.delete.label}"></span>-->
+<!--            </button>-->
+<!--        </div>-->
+<!--        <div class="col-sm-6 text-right">-->
+<!--            <div class="btn-group">-->
+<!--                <button type="submit" value="save" name="ass-request" class="btn btn-primary" th:if="!${readonly}">-->
+<!--                    <span th:text="#{btn.save.label}"></span>-->
+<!--                </button>-->
+<!--                <button type="submit" value="back" name="ass-request" class="btn btn-primary">-->
+<!--                    <span th:text="#{btn.back.label}"></span>-->
+<!--                </button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div th:fragment="paginator-number">-->
+<!--    <div class="ibox-tools">-->
+<!--        <select name="pageSize" th:field="${paginator.pageSize}">-->
+<!--            <option th:each="n : ${#numbers.sequence(1,6)}" th:text="${n} * 5"-->
+<!--                    th:value="${n} * 5"></option>-->
+<!--        </select>-->
+<!--    </div>-->
+<!--</div>-->
+<!--<div th:fragment="js-include">-->
+<!--    &lt;!&ndash; Mainly scripts &ndash;&gt;-->
+<!--    <script type="text/javascript" th:src="@{/js/inspinia.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/appScript.js?v=1.2}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/plugins/metisMenu/jquery.metisMenu.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/plugins/slimscroll/jquery.slimscroll.min.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/angularjs/angular-animate.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/angularjs/ui-bootstrap-tpls-1.3.2.min.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/jquery-ui-1.9.2.custom.min.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/plugins/iCheck/icheck.min.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/plugins/datapicker/bootstrap-datepicker.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/ui-bootstrap-bootbox-4.4.0.min.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/controller/PaginatorCtrl.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/controller/ViewAssegniController.js}"></script>-->
+<!--    <script type="text/javascript" th:src="@{/js/controller/LossManagementController.js}"></script>-->
+<!--</div>-->
+<!--<div th:fragment="footer">-->
+<!--    <div class="row">-->
+<!--        <div class="col-lg-12">-->
+<!--            <div class="footer">-->
+<!--                <div class="pull-right">-->
+<!--                    <img th:src="@{/images/cedacri-logo-xs.png}"/>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+</body>
+</html>
