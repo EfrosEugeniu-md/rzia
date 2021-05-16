@@ -12,7 +12,9 @@ import javax.persistence.*;
 @Entity
 public class Rely {
     @Id
-    private final TpIcPh id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private final TpIcPh tpIcPh;
     private final TypeOfRely type;
     private final double mtzUstI;
     private final double mtzSrabI;
@@ -22,11 +24,6 @@ public class Rely {
     private final double toSrabI;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumns({
-            @JoinColumn(name = "tpNumber_id", referencedColumnName = "tpNumber"),
-            @JoinColumn(name = "tpType_id", referencedColumnName = "tpType"),
-            @JoinColumn(name = "ic_id", referencedColumnName = "ic")
-    })
     private StationAndCellular stationAndCellular;
 
     public static enum TypeOfRely {

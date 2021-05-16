@@ -7,7 +7,6 @@ import ru.list.sorfe.rzia.beans.consumer.Consumer;
 import ru.list.sorfe.rzia.repository.ConsumerRepository;
 import ru.list.sorfe.rzia.service.ConsumerService;
 import ru.list.sorfe.rzia.service.StationService;
-import ru.list.sorfe.rzia.util.ConsumerUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,12 +19,6 @@ public class ConsumerServiceImpl implements ConsumerService {
     @Autowired
     public ConsumerServiceImpl(ConsumerRepository repository, StationService stationService) {
         this.repository = repository;
-//        for (Consumer consumer : ConsumerUtil.consumers) {
-//            consumer.setStation(
-//                    stationService.findById(consumer.getTpIc().getTpNumber()));
-//            repository.save(consumer);
-//        }
-
     }
 
     @Override

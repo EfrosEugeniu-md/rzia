@@ -6,9 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import ru.list.sorfe.rzia.beans.TpIc;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Data
 @RequiredArgsConstructor
@@ -16,9 +14,17 @@ import javax.persistence.OneToOne;
 @Entity
 public class Cabel {
     @Id
-    private final TpIc id;
-    private final Integer s;
-    private final Integer l;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private final TpIc tpIcProvider;
+    @AttributeOverrides({
+            @AttributeOverride(name = "tpNumber", column = @Column(name = "tpNumber_c")),
+            @AttributeOverride(name = "tpType", column = @Column(name = "tpType_c")),
+            @AttributeOverride(name = "ic", column = @Column(name = "ic_c"))}
+    )
+    private final TpIc tpIcConsumer;
+    private final Integer sectionOfCable;
+    private final Integer lengthOfCable;
     @OneToOne(mappedBy = "cabel")
     private Consumer consumer;
 }

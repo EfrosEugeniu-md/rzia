@@ -15,7 +15,7 @@ public class ListConsumerController {
     public ModelAndView viewHome() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("list-consumer");
-        modelAndView.addObject("list", consumerService.findAll());
+      //  modelAndView.addObject("list", consumerService.findAll());
         return modelAndView;
     }
 }

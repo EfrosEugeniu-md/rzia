@@ -10,18 +10,17 @@ import javax.persistence.*;
 @RequiredArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @Entity
+@Table(name = "current")
 public class TransformationCurrent {
     @Id
-    private final TpIcPh id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private final TpIcPh tpIcPh;
     private final TransTipGod transTipGod;
     private final int idTr;
     private final int kTr;
+
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumns({
-            @JoinColumn(name = "tpNumber_id", referencedColumnName = "tpNumber"),
-            @JoinColumn(name = "tpType_id", referencedColumnName = "tpType"),
-            @JoinColumn(name = "ic_id", referencedColumnName = "ic")
-    })
     private StationAndCellular stationAndCellular;
 
     @Override
@@ -36,11 +35,10 @@ public class TransformationCurrent {
 
         if (this.transTipGod.getAgeManufacturing() > 50) {
             stringBuilder.append("19").append(this.transTipGod.getAgeManufacturing());
-        }
-        else   {
+        } else {
             stringBuilder.append("20").append(this.transTipGod.getAgeManufacturing());
         }
-        stringBuilder.append(" , Ktr =  ").append(this.kTr ).append("\n");
+        stringBuilder.append(" , Ktr =  ").append(this.kTr).append("\n");
 
         return stringBuilder.toString();
     }

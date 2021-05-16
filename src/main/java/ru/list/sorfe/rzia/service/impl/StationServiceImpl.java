@@ -1,5 +1,6 @@
 package ru.list.sorfe.rzia.service.impl;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.list.sorfe.rzia.beans.Station;
 import ru.list.sorfe.rzia.beans.consumer.Cabel;
@@ -9,7 +10,6 @@ import ru.list.sorfe.rzia.beans.station.Rely;
 import ru.list.sorfe.rzia.beans.station.StationAndCellular;
 import ru.list.sorfe.rzia.beans.station.TransformationCurrent;
 import ru.list.sorfe.rzia.repository.*;
-import ru.list.sorfe.rzia.service.StationAndCellularService;
 import ru.list.sorfe.rzia.service.StationService;
 import ru.list.sorfe.rzia.util.ConsumerUtil;
 import ru.list.sorfe.rzia.util.StationUtil;
@@ -19,27 +19,34 @@ import java.util.List;
 
 @Service
 public class StationServiceImpl implements StationService {
+    @Value("${message.default.initialization:false}")
+    private boolean initialization;
     private final StationRepository stationRepository;
     private final StationAndCellularRepository stationAndCellularRepository;
-    private final StationAndCellularService stationAndCellularService;
-    private final ConsumerRepository repository;
+    private final ConsumerRepository consumerRepository;
     private final ProviderRepository providerRepository;
     private final CabelRepository cabelRepository;
     private final ReleRepository releRepository;
     private final TransRepository transRepository;
 
-    public StationServiceImpl(StationRepository stationRepository, StationAndCellularRepository stationAndCellularRepository, StationAndCellularService stationAndCellularService, ConsumerRepository repository, ProviderRepository providerRepository, CabelRepository cabelRepository, ReleRepository releRepository, TransRepository transRepository) {
+    public StationServiceImpl(StationRepository stationRepository,
+                              StationAndCellularRepository stationAndCellularRepository,
+                              ConsumerRepository consumerRepository,
+                              ProviderRepository providerRepository,
+                              CabelRepository cabelRepository,
+                              ReleRepository releRepository,
+                              TransRepository transRepository) {
         this.stationRepository = stationRepository;
         this.stationAndCellularRepository = stationAndCellularRepository;
-        this.stationAndCellularService = stationAndCellularService;
-//        for (Station station : StationUtil.stHashSet) {
-//            stationRepository.save(station);
-//        }
-        this.repository = repository;
+        this.consumerRepository = consumerRepository;
         this.providerRepository = providerRepository;
         this.cabelRepository = cabelRepository;
         this.releRepository = releRepository;
         this.transRepository = transRepository;
+
+        if (initialization) {
+            initialization();
+        }
     }
 
     @Override
@@ -77,24 +84,29 @@ public class StationServiceImpl implements StationService {
         for (Consumer consumer : ConsumerUtil.consumers) {
             consumer.setStation(
                     this.findById(consumer.getTpIc().getTpNumber()));
-            repository.save(consumer);
+
+            Cabel cabel = cabelRepository.findFirstByTpIcConsumer(consumer.getTpIc()).orElse(null);
+            Provider provider = providerRepository.findFirstByTpIc(cabel.getTpIcProvider()).orElse(null);
+            consumer.setCabel(cabel);
+            consumer.setProvider(provider);
+            consumerRepository.save(consumer);
         }
 
         for (StationAndCellular myStationAndCellular : StationUtil.stCellHashSet) {
             myStationAndCellular.setStation(
-                    this.findById(myStationAndCellular.getId().getTpNumber()));
+                    this.findById(myStationAndCellular.getTpIc().getTpNumber()));
             stationAndCellularRepository.save(myStationAndCellular);
         }
 
         for (Rely rely : StationUtil.releList) {
             rely.setStationAndCellular(
-                    stationAndCellularService.findById(rely.getId().getTpIc()));
+                    stationAndCellularRepository.findFirstByTpIc(rely.getTpIcPh().getTpIc()).orElse(null));
 
             releRepository.save(rely);
         }
         for (TransformationCurrent transformationCurrent : StationUtil.transList) {
             transformationCurrent.setStationAndCellular(
-                    stationAndCellularService.findById(transformationCurrent.getId().getTpIc()));
+                    stationAndCellularRepository.findFirstByTpIc(transformationCurrent.getTpIcPh().getTpIc()).orElse(null));
             transRepository.save(transformationCurrent);
         }
     }

@@ -40,7 +40,6 @@ public class ConsumerUtil {
             while ((line = reader.readLine()) != null) {
                 String[] elements = line.split("\\t");
                 if (elements.length > 2) {
-                    //                   TpIc tpIc = ConvertToTpIc(elements[1]);
                     cabels.add(getCabel(elements));
                     consumers.add(getConsumer(elements));
                     providers.add(getProvider(elements)
@@ -68,18 +67,22 @@ public class ConsumerUtil {
     private static Consumer getConsumer(String[] elements) {
         int a = 0;
         return new Consumer(
-                ConvertToTpIc(elements[1]),
                 ConvertToTpIc(elements[10]),
                 ParseDouble(elements[11]),
                 ParseDouble(elements[12]),
                 ConvertToAgr(elements[13]),
-                ParseDouble(elements[14])
+                ParseDouble(elements[14]),
+                ParseInt(elements[15]),
+                Consumer.TypeOfServiceZonal
+                        .valueOf(elements[16]
+                                .replace("\u0000", ""))
         );
     }
 
     private static Cabel getCabel(String[] elements) {
         return new Cabel(
                 ConvertToTpIc(elements[1]),
+                ConvertToTpIc(elements[10]),
                 ParseInt(elements[8]),
                 ParseInt(elements[9])
         );

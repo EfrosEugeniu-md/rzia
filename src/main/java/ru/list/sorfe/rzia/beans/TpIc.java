@@ -1,6 +1,7 @@
 package ru.list.sorfe.rzia.beans;
 
 import lombok.*;
+import org.springframework.core.convert.converter.Converter;
 
 import javax.persistence.Embeddable;
 import java.io.Serializable;
@@ -8,7 +9,7 @@ import java.io.Serializable;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
+@NoArgsConstructor(access = AccessLevel.PUBLIC, force = true)
 @Embeddable
 public class TpIc implements Serializable {
     private final Integer tpNumber;
@@ -20,7 +21,16 @@ public class TpIc implements Serializable {
     }
 
     public String toString() {
+        return tpType.toString() + "_" + tpNumber.toString() + "_" + ic.toString();
+    }
 
-        return tpType.toString() + tpNumber.toString() + " cellular nr. " + ic.toString();
+    public static TpIc toTpIC(String str) {
+        String[] strArray = str.split("_");
+
+        return new TpIc(
+                Integer.parseInt(strArray[1]),
+                TypeOfStation.valueOf(strArray[0]),
+                Integer.parseInt(strArray[2])
+        );
     }
 }

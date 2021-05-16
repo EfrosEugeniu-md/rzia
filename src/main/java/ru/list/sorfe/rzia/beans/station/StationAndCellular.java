@@ -16,7 +16,9 @@ import java.util.List;
 @Entity
 public class StationAndCellular {
     @Id
-    private final TpIc id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private final TpIc tpIc;
     private final StCellRollPhasa.TypeOfSecurityElement typeOfSecurityElement;
     private final Integer numberOfSecurityElement;
     @OneToMany(mappedBy = "stationAndCellular", fetch = FetchType.LAZY)

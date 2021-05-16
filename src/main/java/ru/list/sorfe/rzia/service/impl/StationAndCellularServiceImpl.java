@@ -6,8 +6,6 @@ import ru.list.sorfe.rzia.beans.TpIc;
 import ru.list.sorfe.rzia.beans.station.StationAndCellular;
 import ru.list.sorfe.rzia.repository.StationAndCellularRepository;
 import ru.list.sorfe.rzia.service.StationAndCellularService;
-import ru.list.sorfe.rzia.service.StationService;
-import ru.list.sorfe.rzia.util.StationUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,12 +17,6 @@ public class StationAndCellularServiceImpl implements StationAndCellularService 
     @Autowired
     public StationAndCellularServiceImpl(StationAndCellularRepository stationAndCellularRepository) {
         this.stationAndCellularRepository = stationAndCellularRepository;
-//        for (StationAndCellular stationAndCellular : StationUtil.stCellHashSet) {
-//            stationAndCellular.setStation(
-//                    stationService.findById(stationAndCellular.getId().getTpNumber()));
-//            this.stationAndCellularRepository.save(stationAndCellular);
-//        }
-
     }
 
     @Override
@@ -34,7 +26,7 @@ public class StationAndCellularServiceImpl implements StationAndCellularService 
 
     @Override
     public StationAndCellular findById(TpIc id) {
-        return stationAndCellularRepository.findById(id).orElse(null);
+        return stationAndCellularRepository.findFirstByTpIc(id).orElse(null);
     }
 
     @Override

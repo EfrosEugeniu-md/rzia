@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import ru.list.sorfe.rzia.beans.consumer.Cabel;
 import ru.list.sorfe.rzia.repository.CabelRepository;
 import ru.list.sorfe.rzia.service.CabelService;
-import ru.list.sorfe.rzia.util.ConsumerUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +19,6 @@ public class CabelServiceImpl implements CabelService {
     @Autowired
     public CabelServiceImpl(CabelRepository repository) {
         this.repository = repository;
-//        for (Cabel cabel : ConsumerUtil.cabels) repository.save(cabel);
-
     }
 
     @Override

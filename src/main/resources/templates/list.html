@@ -67,7 +67,7 @@
                                     </div>
                                     <ol th:each="celula: ${station.getStationAndCellulars()}">
                                         <li>
-                                            <a href="#">
+                                            <a th:href="@{'/list.html/' + ${celula.getId().toString()}}">
                                                 <span th:text="${celula.getId().getIc()}">4 </span>Cellula
                                             </a></span>
                                         </li>

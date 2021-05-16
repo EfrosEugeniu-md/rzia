@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en"
+      layout:decorator="layout/layout">
+
+<head th:replace="fragments/component :: header"></head>
+<body>
+<div th:replace="fragments/componentBody :: header_s"></div>
+
+<div>
+    <span th:text="stationAndCellular.id">..</span>
+</div>
+
+
+<div th:replace="fragments/componentBody :: footer-main"></div>
+
+<div th:replace="fragments/componentBody :: js-include"></div>
+
+</body>
+</html>

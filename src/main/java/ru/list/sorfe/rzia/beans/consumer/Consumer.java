@@ -4,6 +4,7 @@ import lombok.*;
 import ru.list.sorfe.rzia.beans.Station;
 import ru.list.sorfe.rzia.beans.TpIc;
 
+
 import javax.persistence.*;
 
 @Getter
@@ -14,34 +15,26 @@ import javax.persistence.*;
 @Table(name = "consumer")
 public class Consumer {
     @Id
-    private final TpIc id;
-    @AttributeOverrides({
-            @AttributeOverride(name = "tpNumber", column = @Column(name = "tpNumber_id")),
-            @AttributeOverride(name = "tpType", column = @Column(name = "tpType_id")),
-            @AttributeOverride(name = "ic", column = @Column(name = "ic_id"))}
-    )
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private final TpIc tpIc;
     private final double kzMax;
     private final double kzMin;
     private final AggregatesOfConsumer x;
     private final double kz;
+    private final int dispatcherAddress;
+    private final TypeOfServiceZonal serviceZonal;
     @OneToOne
-    @JoinColumns({
-            @JoinColumn(name = "tpNumber", referencedColumnName = "tpNumber"),
-            @JoinColumn(name = "tpType", referencedColumnName = "tpType"),
-            @JoinColumn(name = "ic", referencedColumnName = "ic")
-    })
     private Provider provider;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumns({
-            @JoinColumn(name = "tpNumber", referencedColumnName = "tpNumber"),
-            @JoinColumn(name = "tpType", referencedColumnName = "tpType"),
-            @JoinColumn(name = "ic", referencedColumnName = "ic")
-    })
+    @OneToOne
     private Cabel cabel;
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "tpNumber_st", referencedColumnName = "tpNumber")
     private Station station;
+
+    public static enum TypeOfServiceZonal {
+        Centr, Scule, Munch, Buicn, Botan, Cecan
+    }
 
     @Override
     public String toString() {
