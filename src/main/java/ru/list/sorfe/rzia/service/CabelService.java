@@ -8,4 +8,8 @@ public interface CabelService {
     Cabel save(Cabel cabel);
 
     List<Cabel> findAll();
+
+     double getR0(Cabel cabel);
+
+    double getX0(Cabel cabel);
 }

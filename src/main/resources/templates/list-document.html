@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="en"
+      layout:decorator="layout/layout">
+
+<head th:replace="fragments/component :: header"></head>
+
+<body data-offset="200" data-spy="scroll" data-target=".ownavigation">
+
+<!--<div th:replace="fragments/componentBody :: header_s"></div>-->
+
+<div class="container">
+    <li>
+    <li th:each="sets : ${list}">
+        <a th:href="@{'/pdfSets?type=CELL&id=' + ${sets.getId()} }" target="_blank">
+            <span th:text="${sets.getDescription().toString() + ' *** '} + ${sets.getDateOfCreate().toString()}">... </span>
+        </a>
+        <ol>
+            <li th:each="set : ${sets.getDocuments()}">
+
+                <a th:href="@{'/pdfDocument?type=CELL&id=' + ${set.getId()} }" target="_blank">
+                    <span th:text="${set.getTpIc().toString()+ ' *** '}+ ${set.getDateOfWork().toString()}">... </span>
+                </a>
+        </ol>
+
+    </li>
+</div>
+
+</li>
+
+
+</body>
+</html>

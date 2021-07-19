@@ -107,9 +107,9 @@
                                             <div class="comment-author vcard">
                                                 <img alt="img" src="/assets/images/comment-11.jpg"
                                                      class="avatar avatar-72 photo"/>
-                                                <b class="fn"><span th:text="${consumer.getProvider().getId().getTpType()}
-                                                + ${consumer.getProvider().getId().getTpNumber()} + ' , '
-                                                + ${consumer.getProvider().getId().getIc()} + ' cellul.'"></span></b>
+                                                <b class="fn"><span th:text="${consumer.getProvider().getTpIc().getTpType()}
+                                                + ${consumer.getProvider().getTpIc().getTpNumber()} + ' , '
+                                                + ${consumer.getProvider().getTpIc().getIc()} + ' cellul.'"></span></b>
                                             </div>
                                             <div class="comment-metadata">
                                                 <a href="#">document</a>
@@ -117,10 +117,10 @@
                                         </footer>
                                         <div class="comment-content">
                                             <p>The supply of electricity is carried out by means of a cable
-                                                <strong><span th:text="${consumer.getCabel().getL()}"></span></strong> m
+                                                <strong><span th:text="${consumer.getCabel().getLengthOfCable()}"></span></strong> m
                                                 long a
                                                 and with a cross-section of <strong><span
-                                                        th:text="${consumer.getCabel().getS()}"></span></strong> mm
+                                                        th:text="${consumer.getCabel().getSectionOfCable()}"></span></strong> mm
                                                 square,
                                                 the line is protected: </p>
                                             <p th:if="${consumer.getProvider().getTo()}!=0">
@@ -161,9 +161,9 @@
                                                 <img alt="img" src="/assets/images/comment-11.jpg"
                                                      class="avatar avatar-72 photo"
                                                      th:if="${cellula.getTypeOfSecurityElement().toString() == 'TP'}"/>
-                                                <b class="fn"><span th:text="${cellula.getId().getTpType()}
-                                                + ${cellula.getId().getTpNumber()} + ' , '
-                                                + ${cellula.getId().getIc()} + ' cellul.' + ${cellula.getTypeOfSecurityElement()}"></span></b>
+                                                <b class="fn"><span th:text="${cellula.getTpIc().getTpType()}
+                                                + ${cellula.getTpIc().getTpNumber()} + ' , '
+                                                + ${cellula.getTpIc().getIc()} + ' cellul.' + ${cellula.getTypeOfSecurityElement()}"></span></b>
                                             </div>
                                             <div class="comment-metadata">
                                                 <a href="#">document</a>
@@ -183,7 +183,7 @@
                                             <ol th:each="tr:${cellula.getTransformationCurrents()}">
                                                 <il>
                                                     <strong><span
-                                                            th:text="'Phase' + ${tr.getId().getPhase()}">..</span></strong>
+                                                            th:text="'Phase' + ${tr.getTpIcPh().getPhase()}">..</span></strong>
                                                     a current transformer is installed
                                                     <strong><span
                                                             th:text="'type: ' + ${tr.getTransTipGod().getTypeOfTransfCurent()} + ${tr.getKTr()*5} + '/5'">..</span></strong>
@@ -201,7 +201,7 @@
                                                 <il>
                                                     <p>
                                                         <strong><span
-                                                                th:text="'Phase' + ${rl.getId().getPhase()}">..</span></strong>
+                                                                th:text="'Phase' + ${rl.getTpIcPh().getPhase()}">..</span></strong>
                                                         a current is installed rely
                                                         <strong><span
                                                                 th:text="'type: ' + ${rl.getType()} ">..</span></strong>serving

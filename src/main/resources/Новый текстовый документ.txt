@@ -1,0 +1,142 @@
+"Object            "+$P{Parameter1}
+"Sef SRE            "+$P{Parameter2}
+"Celula    nr. 4 Rezervați intrarea ТП 13"=$P{Parameter3}
+"16 апреля 2019"=$P{Parameter4}
+"verificări de protecție a releului și circuite secundare de conexiune de 10 kV"=$P{Parameter5}
+"1. Obiect protejat: Linie de cablu L = 1750 m, S = 185 mp Mm."=$P{Parameter6}
+"2. Tipul celulei Întrerupătoare de ulei, acționare electromagnetică, relee indirecte secundare"=$P{Parameter7}
+"3. Protecţie:      Curent de întrerupere Iср=660"=$P{Parameter8}
+"Protecție la supracurent - nu e prevazut"=$P{Parameter9}
+"ТПЛМ10"=$P{Parameter10}
+"150"=$P{Parameter11}
+"30"=$P{Parameter12}
+"celula Nr.4"=$P{Parameter13}
+
+"Curent de întrerupere"=$P{Parameter14}
+"РТ40/20"=$P{Parameter15}
+"Iср= 22 A;"=$P{Parameter16}
+"2"=$P{Parameter17}
+
+"Curent de întrerupere"=$P{Parameter18}
+"РТ40/20"=$P{Parameter19}
+"Iср= 22 A;"=$P{Parameter20}
+"2"=$P{Parameter21}
+
+"Curent de întrerupere"=$P{Parameter22}
+"РТ40/20"=$P{Parameter23}
+"Iср= 22 A;"=$P{Parameter24}
+"2"=$P{Parameter25}
+
+"Curent de întrerupere"=$P{Parameter26}
+"РТ40/20"=$P{Parameter27}
+"Iср= 22 A;"=$P{Parameter28}
+"2"=$P{Parameter29}
+----------------------------------------------------------------------------
+"fază А"=$P{Parameter1}
+"РТ40/20"=$P{Parameter2}
+"30"=$P{Parameter3}
+"22"=$P{Parameter4}
+
+"fază O"=$P{Parameter5}
+"РТ40/20"=$P{Parameter2}
+"30"=$P{Parameter3}
+"22"=$P{Parameter8}
+
+"fază C"=$P{Parameter9}
+"РТ40/20"=$P{Parameter2}
+"30"=$P{Parameter3}
+"22"=$P{Parameter12}
+
+"fază А"=$P{Parameter13}
+"РТ40/20"=$P{Parameter2}
+"30"=$P{Parameter3}
+"22"=$P{Parameter4}
+"22"=$P{Parameter17}
+
+"fază O"=$P{Parameter18}
+"РТ40/20"=$P{Parameter2}
+"30"=$P{Parameter3}
+"22"=$P{Parameter4}
+"22"=$P{Parameter22}
+
+"fază C"=$P{Parameter23}
+"РТ40/20"=$P{Parameter2}
+"30"=$P{Parameter3}
+"22"=$P{Parameter4}
+"22"=$P{Parameter27}
+
+"30  А "=$P{Parameter28}
+"1.5  А "=$P{Parameter29}
+"  № 4   ТП 12    ."=$P{Parameter30}
+
+"/ Regulile I./"=$P{Parameter31}
+"/ Regulile I./"=$P{Parameter31}
+"/ Regulile I./"=$P{Parameter31}
+"/ Regulile I./"=$P{Parameter34}
+
+------------------------------------------
+
+"ST.: 1 .    Celula nr.:  "+$P{Parameter1}=$P{Parameter1}
+Sef SRE      Melnic A.=$P{Parameter2}
+"16 апреля 2019"=$P{Parameter3}
+"PDC 13"=$P{Parameter4}
+"30"=$P{Parameter5}
+"6"=$P{Parameter6}
+"13170"=$P{Parameter7}
+"5880"=$P{Parameter8}
+"АСБ"=$P{Parameter9}
+"240"=$P{Parameter10}
+"2940"=$P{Parameter11}
+"0,13"=$P{Parameter12}
+"0,071"=$P{Parameter13}
+"ТМРУМ"=$P{Parameter14}
+"6"=$P{Parameter15}
+"685"=$P{Parameter16}
+"66"=$P{Parameter17}
+"5,68"=$P{Parameter18}
+"100"=$P{Parameter19}
+"1"=$P{Parameter20}
+"100"=$P{Parameter21}
+"100"=$P{Parameter22}
+"0.5"=$P{Parameter23}
+"100"=$P{Parameter24}
+
+"0,277"=$P{Parameter25}
+"0,619"=$P{Parameter26}
+"0,382"=$P{Parameter27}
+"0,209"=$P{Parameter28}
+"0,618"=$P{Parameter29}
+"0,912"=$P{Parameter30}
+"2,99"=$P{Parameter31}
+"3,491"=$P{Parameter32}
+"3,832"=$P{Parameter33}
+
+"5896"=$P{Parameter34}
+"3993"=$P{Parameter35}
+"3478"=$P{Parameter36}
+"993"=$P{Parameter37}
+"905"=$P{Parameter38}
+"788"=$P{Parameter39}
+
+"783"=$P{Parameter40}
+"130"=$P{Parameter41}
+"3,48"=$P{Parameter42}
+"0,79"=$P{Parameter43}
+"1"=$P{Parameter44}
+
+"783"=$P{Parameter45}
+"130"=$P{Parameter46}
+"3,48"=$P{Parameter47}
+"0,79"=$P{Parameter48}
+"	Concluzie: Protecta prin relee a fost efectuata conform cerinţelor DNT în vigoare , cu excepția punctul : 1.4 , 1.5 ."=$P{Parameter49}
+"/ Regulile I./"=$P{Parameter50}
+"/ Regulile I./"=$P{Parameter51}
+
+
+
+
+
+
+
+
+

@@ -16,11 +16,12 @@ import ru.list.sorfe.rzia.util.StationUtil;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 @Service
 public class StationServiceImpl implements StationService {
-    @Value("${message.default.initialization:false}")
-    private boolean initialization;
+
+
     private final StationRepository stationRepository;
     private final StationAndCellularRepository stationAndCellularRepository;
     private final ConsumerRepository consumerRepository;
@@ -44,9 +45,7 @@ public class StationServiceImpl implements StationService {
         this.releRepository = releRepository;
         this.transRepository = transRepository;
 
-        if (initialization) {
-            initialization();
-        }
+       // initialization();
     }
 
     @Override
@@ -92,7 +91,7 @@ public class StationServiceImpl implements StationService {
             consumerRepository.save(consumer);
         }
 
-        for (StationAndCellular myStationAndCellular : StationUtil.stCellHashSet) {
+        for (StationAndCellular myStationAndCellular : StationUtil.stationAndCellulars) {
             myStationAndCellular.setStation(
                     this.findById(myStationAndCellular.getTpIc().getTpNumber()));
             stationAndCellularRepository.save(myStationAndCellular);

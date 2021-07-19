@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 7.9.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ba711f67-7754-44e2-8d81-da21415772aa">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="Parameter1" class="java.lang.String"/>
+    <parameter name="Parameter2" class="java.lang.String"/>
+    <parameter name="Parameter3" class="java.lang.String"/>
+    <parameter name="Parameter4" class="java.lang.String"/>
+    <parameter name="Parameter5" class="java.lang.String"/>
+    <parameter name="Parameter6" class="java.lang.String"/>
+    <parameter name="Parameter7" class="java.lang.String"/>
+    <parameter name="Parameter8" class="java.lang.String"/>
+    <parameter name="Parameter9" class="java.lang.String"/>
+    <parameter name="Parameter10" class="java.lang.String"/>
+    <parameter name="Parameter11" class="java.lang.String"/>
+    <parameter name="Parameter12" class="java.lang.String"/>
+    <parameter name="Parameter13" class="java.lang.String"/>
+    <parameter name="Parameter14" class="java.lang.String"/>
+    <parameter name="Parameter15" class="java.lang.String"/>
+    <parameter name="Parameter16" class="java.lang.String"/>
+    <parameter name="Parameter17" class="java.lang.String"/>
+    <parameter name="Parameter18" class="java.lang.String"/>
+    <parameter name="Parameter19" class="java.lang.String"/>
+    <parameter name="Parameter20" class="java.lang.String"/>
+    <parameter name="Parameter21" class="java.lang.String"/>
+    <parameter name="Parameter22" class="java.lang.String"/>
+    <parameter name="Parameter23" class="java.lang.String"/>
+    <parameter name="Parameter24" class="java.lang.String"/>
+    <parameter name="Parameter25" class="java.lang.String"/>
+    <parameter name="Parameter26" class="java.lang.String"/>
+    <parameter name="Parameter27" class="java.lang.String"/>
+    <parameter name="Parameter28" class="java.lang.String"/>
+    <parameter name="Parameter29" class="java.lang.String"/>
+    <parameter name="Parameter30" class="java.lang.String"/>
+    <parameter name="Parameter31" class="java.lang.String"/>
+    <parameter name="Parameter32" class="java.lang.String"/>
+    <parameter name="Parameter33" class="java.lang.String"/>
+    <parameter name="Parameter34" class="java.lang.String"/>
+    <parameter name="Parameter35" class="java.lang.String"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <detail>
+        <band height="802" splitType="Stretch">
+            <textField>
+                <reportElement x="27" y="75" width="500" height="20" uuid="ac925682-643e-421c-8bb5-02024a914492"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA["7.1 Curent de întrerupere.						        Tabelul nr.4"]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="35" y="100" width="91" height="29" uuid="8b157ca6-a3a7-460e-a539-8fec08f00c30"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11"/>
+                </textElement>
+                <text><![CDATA[Curent aplicat
+ în releu      ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="25" y="133" width="106" height="20" uuid="d7303f90-78cc-4cac-b514-55ff2805831d"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter1}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="155" y="100" width="91" height="15" uuid="cc03336f-a279-4a3a-9543-253e0a496ab9"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11"/>
+                </textElement>
+                <text><![CDATA[Tipul de releu]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="155" y="135" width="91" height="20" uuid="0e019c22-2eb4-4e17-9457-9358265ced18"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter2}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="256" y="100" width="125" height="29" uuid="5c2bea8f-e081-4f3a-ac7c-9b02136cc288"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11"/>
+                </textElement>
+                <text><![CDATA[Curent de setare a releului, A]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="275" y="135" width="106" height="20" uuid="d95f076a-b740-4680-bf2c-0b9ca4241336"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter3}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="396" y="99" width="122" height="35" uuid="06cd0055-f925-48c6-a206-14f2dd08d162"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11"/>
+                </textElement>
+                <text><![CDATA[Curent de funcționare
+secundar de protecție, A]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="405" y="135" width="106" height="20" uuid="47d1fc96-be03-478b-ab6d-96d26883b0af"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter4}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="25" y="96" width="510" height="2" uuid="5da7accb-fe67-447f-8e2c-eed5ad0b875d"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="25" y="129" width="511" height="2" uuid="812cecac-e7ee-40a7-b102-ed92b898e172"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="25" y="155" width="511" height="4" uuid="baea62a1-2b0e-4bae-9b79-12c827bf85c7"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="25" y="96" width="1" height="112" uuid="eae56bf8-1f31-4b97-a80c-5849f274f4d0">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <line>
+                <reportElement x="145" y="96" width="1" height="112" uuid="eee40259-f08f-4794-b228-51e840bb86cc">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <line>
+                <reportElement x="255" y="97" width="1" height="112" uuid="9606876e-d4bf-4d57-ae11-809991025cde">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <line>
+                <reportElement x="385" y="98" width="1" height="112" uuid="40df1368-3b4b-4efa-90cc-4cc3217a18b5">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <line>
+                <reportElement x="535" y="97" width="1" height="112" uuid="e39200c1-2818-447e-8ba6-1a5c067fb101">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <staticText>
+                <reportElement x="22" y="0" width="511" height="30" uuid="cb997d9f-60c8-4a0c-981d-5ee8ab75f507"/>
+                <textElement>
+                    <font fontName="Serif" size="11" isBold="true"/>
+                </textElement>
+                <text><![CDATA[	7. Verificarea caracteristicilor electrice ale protecției atunci când este alimentată de la o sursă externă de curent.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="23" y="31" width="511" height="30" uuid="c2fef8f3-8731-40c7-b5e5-711a06db786a"/>
+                <textElement>
+                    <font fontName="Serif" size="11" isBold="false" isItalic="true"/>
+                </textElement>
+                <text><![CDATA[	Verificarea a fost efectuată atunci când curentul a fost furnizat de pe bancul de testare la circuitele secundare ale transformatoarelor de curent.]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="25" y="161" width="106" height="20" uuid="9323de8f-3099-4997-8d05-0debc863b24a"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter5}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="155" y="163" width="91" height="20" uuid="10887b99-ce60-4c4f-adb4-13e9673e1ae2"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter6}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="275" y="163" width="106" height="20" uuid="b7419291-ac3f-4635-bd90-d91771f8a12c"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter7}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="405" y="163" width="106" height="20" uuid="671119ca-4612-4467-9969-8ea06cfcd44d"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter8}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="25" y="183" width="511" height="4" uuid="a16ee496-d3d8-40e6-8b6e-acbcb23aac72"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <textField>
+                <reportElement x="26" y="187" width="106" height="20" uuid="f10d302e-f82e-4cd5-a433-ac154174c66a"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter9}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="156" y="189" width="91" height="20" uuid="8701c88f-1eab-4116-afa7-824c83027af7"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter10}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="276" y="189" width="106" height="20" uuid="2417795f-e1ee-4b1e-9a95-20a47b549913"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter11}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="406" y="189" width="106" height="20" uuid="b4301566-bf0b-4a06-93d8-9885c394be62"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter12}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="26" y="209" width="511" height="4" uuid="1222ade3-a3d3-4bc7-858c-d7e3d0186cf9"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <textField>
+                <reportElement x="28" y="216" width="500" height="20" uuid="a9af433e-338b-44db-838f-9d7b15b5dc6e"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA["7.2  Protecție la supracurent :		  		        Tabelul nr.5"]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="36" y="253" width="91" height="29" uuid="c7498825-9861-4328-a6f9-ef7ce2ad1ca1"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11"/>
+                </textElement>
+                <text><![CDATA[Curent aplicat
+ în releu      ]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="26" y="286" width="106" height="20" uuid="7945c726-ddac-45b9-9107-3c8c92a1aa21"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter13}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="124" y="253" width="91" height="15" uuid="4a3dfdbb-0af9-4ada-b64f-1d745423f173"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11"/>
+                </textElement>
+                <text><![CDATA[Tipul de releu]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="124" y="288" width="91" height="20" uuid="f2f10d80-dc14-4c0f-b502-1a67d40972ed"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter14}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="205" y="241" width="125" height="41" uuid="9b26e681-674c-4eec-83b1-0368c25a30bb"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11"/>
+                </textElement>
+                <text><![CDATA[Curent de setare
+ a releului, A]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="224" y="288" width="106" height="20" uuid="404f02cb-abb6-4b51-89d0-918fb39375e1"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter15}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="319" y="236" width="122" height="49" uuid="c8060545-ebcb-4b3e-95c1-09a68af4d64e"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11"/>
+                </textElement>
+                <text><![CDATA[Curent de
+funcționare
+secundar de prot., A]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="406" y="288" width="106" height="20" uuid="09c0addc-0476-47e7-b1f2-2620887eaad0"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter17}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="26" y="232" width="510" height="2" uuid="e46a1cda-0244-4e3e-9aa3-e4a66ff2035c"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="26" y="282" width="511" height="2" uuid="a2e657c4-a5ee-4e85-8172-4a39e1dddf6c"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="26" y="308" width="511" height="4" uuid="457c9e11-d9be-4c56-af81-44348467bcac"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <line>
+                <reportElement x="26" y="232" width="1" height="129" uuid="114f694c-5b3f-4cb8-a915-75dc3848dd2c">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <textField>
+                <reportElement x="26" y="314" width="106" height="20" uuid="a95e0b25-5ffa-4856-8405-31226139a48b"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter18}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="124" y="316" width="91" height="20" uuid="e4395ed0-3070-4b39-b121-035b006c5234"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter19}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="224" y="316" width="106" height="20" uuid="65b14f54-e141-4f4e-adb8-0b4f717c1f48"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter20}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="406" y="316" width="106" height="20" uuid="ffed479e-c45a-4212-87ab-0606c9e6c429"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter22}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="26" y="336" width="511" height="4" uuid="af782ad3-2a31-4600-9c21-a3008e6835af"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <textField>
+                <reportElement x="27" y="340" width="106" height="20" uuid="9ae81d3f-bdcb-4c64-af50-b4d67e811de8"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter23}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="125" y="342" width="91" height="20" uuid="fc3479ff-2ebb-4200-9380-472c03d91745"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter24}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="225" y="342" width="106" height="20" uuid="3379b192-9425-485d-b4d8-9f814ede9c5c"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter25}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="407" y="342" width="106" height="20" uuid="a5e675da-5f74-450f-a8fb-c8742aa6cddb"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter27}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="27" y="362" width="511" height="4" uuid="9afe3bc3-6469-460a-9b0a-4239e189d75c"/>
+                <graphicElement>
+                    <pen lineWidth="1.0"/>
+                </graphicElement>
+            </line>
+            <staticText>
+                <reportElement x="438" y="241" width="122" height="49" uuid="1c9decf5-6091-4fa0-ade4-e9eb2636c0d9"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11"/>
+                </textElement>
+                <text><![CDATA[Timp de
+raspuns
+protecție, sec.
+]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="332" y="290" width="106" height="20" uuid="5660153e-13cd-4826-baf3-ffa09700d650"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter16}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="327" y="316" width="106" height="20" uuid="227a30b3-d273-4da4-90a8-027d2ad73dd8"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter21}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="332" y="342" width="106" height="20" uuid="54380259-cb37-429e-96dc-b3ead92e2176"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter26}]]></textFieldExpression>
+            </textField>
+            <line>
+                <reportElement x="122" y="233" width="1" height="129" uuid="405adb40-9182-4863-b13b-4a1c0e2fc4f4">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <line>
+                <reportElement x="537" y="235" width="1" height="129" uuid="817479eb-7aa5-433a-a7fa-8b41fa6b9f3f">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <line>
+                <reportElement x="432" y="236" width="1" height="129" uuid="19008f66-688d-4a4e-9816-c10959308faf">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <line>
+                <reportElement x="322" y="235" width="1" height="129" uuid="58ba6e01-7fef-4d09-b406-16435f62b46a">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <line>
+                <reportElement x="224" y="234" width="1" height="129" uuid="f6cace30-212d-44e3-9fb8-079e9650f075">
+                    <property name="com.jaspersoft.studio.unit.x" value="px"/>
+                    <property name="com.jaspersoft.studio.unit.height" value="px"/>
+                </reportElement>
+            </line>
+            <staticText>
+                <reportElement x="22" y="371" width="511" height="20" uuid="64204850-5189-487b-9d70-9c9f8000f956"/>
+                <textElement>
+                    <font fontName="Serif" size="11" isBold="true"/>
+                </textElement>
+                <text><![CDATA[	8. Verificarea interacțiunii circuitelor secundare.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="23" y="388" width="511" height="59" uuid="525cfb47-7d2a-4dc6-95c6-19a6edee8f2b"/>
+                <textElement>
+                    <font fontName="Serif" size="11" isBold="false" isItalic="true"/>
+                </textElement>
+                <text><![CDATA[	A fost verificată interacțiunea circuitelor de control și protecție la o tensiune de curent de funcționare egală cu Uн și 0,8 Uн. Acțiunea releului de protecție la supracurent cu acțiune directă este testată pentru deschiderea întrerupătorului. Interacțiunea tuturor circuitelor urmează diagramele schematice.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="24" y="448" width="511" height="20" uuid="59b41f60-cd76-4356-a556-058531ce7a89"/>
+                <textElement>
+                    <font fontName="Serif" size="11" isBold="true"/>
+                </textElement>
+                <text><![CDATA[	9. Verificarea protecției prin curent și tensiune de funcționare.]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="24" y="470" width="511" height="70" uuid="93c76d22-984e-418a-b7e9-f0ecafee57a9"/>
+                <textElement>
+                    <font fontName="Serif" size="11" isBold="false" isItalic="true"/>
+                </textElement>
+                <text><![CDATA[	Cu un curent de încărcare primar de aproximativ              și secundar             funcționarea circuitelor de curent a fost verificată prin măsurarea curenților secundari de sarcină în faze și în firul neutru.
+	S-a verificat funcționalitatea și corectitudinea conexiunii circuitelor de tensiune	măsurare pe un număr de ieșiri de tensiune de linie și de fază.
+	Circuitele și măsurătorile de protecție la curent și tensiune sunt corecte.
+]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="306" y="471" width="50" height="20" uuid="45ca68fe-487f-4e0d-b4b8-457f0699cda2"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter28}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="402" y="470" width="50" height="20" uuid="8d4fd36e-085a-4fc9-bfdf-2f7375e05b96"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter29}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="25" y="553" width="511" height="70" uuid="93aeee52-ceba-4fc0-9515-bb5f615b29a2"/>
+                <textElement>
+                    <font fontName="Serif" size="11" isBold="false" isItalic="true"/>
+                </textElement>
+                <text><![CDATA[	                 Dispozitive de protecție a releului de celule                          .  - realizat în conformitate cu PUE, verificat în conformitate cu "Regulile pentru întreținerea dispozitivelor de protecție a releului și a automatelor electrice ale rețelelor electrice 0,4 - 35 kV" și poate fi pus în funcțiune.	]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="26" y="553" width="110" height="20" uuid="438cd182-0e24-4665-87ec-2c52c26a5a69"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA["10.  Concluzie:"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="325" y="552" width="110" height="20" uuid="bf2dfe34-e7b6-42ff-b46b-9f43ca3eeb20"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter30}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="81" y="640" width="91" height="15" uuid="365ae331-a0c7-4f32-80cd-bc66a2bdfbc7"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Serif" size="11" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Verificare făcută: ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="80" y="710" width="155" height="15" uuid="f5d572a7-d75d-4372-aade-775adbaaa771"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Sef de performanță]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="82" y="760" width="174" height="20" uuid="cf1cab30-ac63-45ca-a5cd-8697e72d8b68"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="true" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA["Protocol verificat"]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="390" y="628" width="91" height="20" uuid="9808e67d-44a4-42df-a26a-35f462261e58"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="false" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter31}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="390" y="666" width="91" height="20" uuid="d4f435c2-7c54-4197-ba0a-4aec1ea99413"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="false" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter32}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="390" y="704" width="91" height="20" uuid="b30ba0c3-6401-43b2-92f2-565417101abb"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="false" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter33}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="390" y="753" width="91" height="20" uuid="72354a05-cc18-4ea8-bbc8-2ba2649a7fba"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Serif" size="11" isBold="false" isItalic="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{Parameter34}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>

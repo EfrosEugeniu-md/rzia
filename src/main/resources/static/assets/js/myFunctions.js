@@ -25,6 +25,16 @@ function setLinkToAnotherSection(link) {
     localStorage.setItem('linkToAnotherSection', linkToAnotherSection);
 }
 
+function moveToIdStation() {
+    var linkToIdStation = document.getElementById("input-group").value;
+    if (linkToIdStation.toString().length)
+    {linkToIdStation = '#' + linkToIdStation;
+    $([document.documentElement, document.body]).animate({
+        scrollTop: $(linkToIdStation).offset().top-= 150
+    }, 400);}
+};
+
+
 (function ($) {
 
     "use strict"

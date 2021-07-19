@@ -1,7 +1,5 @@
 package ru.list.sorfe.rzia.util;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.core.io.ClassPathResource;
 import ru.list.sorfe.rzia.beans.StCellRollPhasa;
 import ru.list.sorfe.rzia.beans.Station;
@@ -23,10 +21,9 @@ import java.util.Set;
 import static ru.list.sorfe.rzia.util.CommonUtil.*;
 
 public class StationUtil {
-    private static final Logger LOGGER = LoggerFactory.getLogger(StationUtil.class.getName());
     public static List<TransformationCurrent> transList = new ArrayList<>();
     public static List<Rely> releList = new ArrayList<>();
-    public static Set<StationAndCellular> stCellHashSet = new HashSet<>();
+    public static List<StationAndCellular> stationAndCellulars = new ArrayList<>();
     public static Set<Station> stHashSet = new HashSet<>();
 
     static {
@@ -41,16 +38,19 @@ public class StationUtil {
                 new InputStreamReader(resource))) {
 
             String line;
-
+            StCellRollPhasa stCellRollPhasaLast = null;
             while ((line = reader.readLine()) != null) {
                 String[] elements = line.split("\\t");
                 if (elements.length > 2) {
 
                     try {
                         StCellRollPhasa stCellRollPhasa = ConvertToStCellRollPhasa(elements[0]);
+                        if (!stCellRollPhasa.equals(stCellRollPhasaLast)) {
+                            StationAndCellular stationAndCellular = getStCell(stCellRollPhasa);
+                            stCellRollPhasaLast = stCellRollPhasa;
+                            stationAndCellulars.add(stationAndCellular);
+                        }
 
-                        StationAndCellular stationAndCellular = getStCell(stCellRollPhasa);
-                        stCellHashSet.add(stationAndCellular);
 
                         Station station = new Station(stCellRollPhasa.getId().getTpIc().getTpNumber());
                         stHashSet.add(station);

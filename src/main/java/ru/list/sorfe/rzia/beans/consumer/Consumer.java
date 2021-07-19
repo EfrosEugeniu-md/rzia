@@ -33,7 +33,7 @@ public class Consumer {
     private Station station;
 
     public static enum TypeOfServiceZonal {
-        Centr, Scule, Munch, Buicn, Botan, Cecan
+        Centr, Scule, Munch, Buicn, Botan, Cecan, None
     }
 
     @Override

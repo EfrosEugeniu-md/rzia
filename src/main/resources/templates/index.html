@@ -107,8 +107,8 @@
                                  data-paddingbottom="[0,0,0,0]"
                                  data-paddingleft="[0,0,0,0]"
                                  style="z-index: 5; color: #fff; font-family: 'Montserrat Alternates', sans-serif;">
-<!--                                Prestige is a single page wordpress theme with multiple demos and amazing features.-->
-<!--                                Click the ‘Features’ button to-->
+                                <!--                                Prestige is a single page wordpress theme with multiple demos and amazing features.-->
+                                <!--                                Click the ‘Features’ button to-->
                             </div>
                         </li>
                         <li>
@@ -200,8 +200,8 @@
                                  data-paddingbottom="[0,0,0,0]"
                                  data-paddingleft="[0,0,0,0]"
                                  style="z-index: 5; color: #fff; font-family: 'Montserrat Alternates', sans-serif;">
-<!--                                Prestige is a single page wordpress theme with multiple demos and amazing features.-->
-<!--                                Click the ‘Features’ button to-->
+                                <!--                                Prestige is a single page wordpress theme with multiple demos and amazing features.-->
+                                <!--                                Click the ‘Features’ button to-->
                             </div>
                         </li>
                     </ul>
@@ -226,15 +226,18 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="features-box">
                                 <i class="pe-7s-way"></i>
-                                <h3>User-friendly Design</h3>
-                                <p>Where you can see our troubles are all the same. You wanna be where everybody knows
-                                    Your name.</p>
+                                <a href="/list.html" title="Blog" th:onclick="'setLinkToAnotherSection(\'' + '\')'">
+                                    <h3> List</h3></a>
+                                <p>Here you can see the entire list of equipment installed at our electrical
+                                    substations.</p>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="features-box">
                                 <i class="pe-7s-server"></i>
-                                <h3>Ready-to-use Elements</h3>
+                                <a href="/list-cellular.html" title="Blog Single"
+                                   th:onclick="'setLinkToAnotherSection(\'' + '\')'">
+                                    <h3> List cellular</h3></a>
                                 <p>Where you can see our troubles are all the same. You wanna be where everybody knows
                                     Your name.</p>
                             </div>
@@ -242,7 +245,8 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="features-box">
                                 <i class="pe-7s-config"></i>
-                                <h3>Easy Customization</h3>
+                                <a href="/list-consumer.html" title="Blog Single"
+                                   th:onclick="'setLinkToAnotherSection(\'' + '\')'"> <h3> List consumer</h3></a>
                                 <p>Where you can see our troubles are all the same. You wanna be where everybody knows
                                     Your name.</p>
                             </div>
@@ -250,7 +254,8 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="features-box">
                                 <i class="pe-7s-photo"></i>
-                                <h3>Cool Portfolio layouts</h3>
+                                <a href="/list-provider.html" title="Blog Single"
+                                   th:onclick="'setLinkToAnotherSection(\'' + '\')'"><h3> List provider</h3></a>
                                 <p>Where you can see our troubles are all the same. You wanna be where everybody knows
                                     Your name.</p>
                             </div>
@@ -258,7 +263,8 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="features-box">
                                 <i class="pe-7s-light"></i>
-                                <h3>Unique Demos</h3>
+                                <a href="/list-relies.html" title="Blog Single"
+                                   th:onclick="'setLinkToAnotherSection(\'' + '\')'"><h3> List relies</h3></a>
                                 <p>Where you can see our troubles are all the same. You wanna be where everybody knows
                                     Your name.</p>
                             </div>
@@ -266,7 +272,8 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="features-box">
                                 <i class="pe-7s-helm"></i>
-                                <h3>Flexible Design</h3>
+                                <a href="/list-transformation.html" title="Blog Single"
+                                   th:onclick="'setLinkToAnotherSection(\''+ '\')'"><h3> List transformation</h3></a>
                                 <p>Where you can see our troubles are all the same. You wanna be where everybody knows
                                     Your name.</p>
                             </div>
@@ -501,29 +508,29 @@
                 <div class="col-md-3 col-xs-6 no-padding">
                     <div class="counter-box">
                         <i><img src="assets/images/counter-ic-1.png" alt="Icon"/></i>
-                        <span id="skill_count-1" data-skills_percent="7456"></span>
-                        <h4>Projects</h4>
+                        <span id="skill_count-1" th:attr="data-skills_percent=${stationCount}"></span>
+                        <h4>Station</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-6 no-padding">
                     <div class="counter-box">
                         <i><img src="assets/images/counter-ic-2.png" alt="Icon"/></i>
-                        <span id="skill_count-2" data-skills_percent="450"></span>
-                        <h4>Awards</h4>
+                        <span id="skill_count-2" th:attr="data-skills_percent=${cellularCount}"></span>
+                        <h4>Cellul</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-6 no-padding">
                     <div class="counter-box">
                         <i><img src="assets/images/counter-ic-3.png" alt="Icon"/></i>
-                        <span id="skill_count-3" data-skills_percent="5426"></span>
-                        <h4>Ideas</h4>
+                        <span id="skill_count-3" th:attr="data-skills_percent=${releCount}"></span>
+                        <h4>Relies</h4>
                     </div>
                 </div>
                 <div class="col-md-3 col-xs-6 no-padding">
                     <div class="counter-box">
                         <i><img src="assets/images/counter-ic-4.png" alt="Icon"/></i>
-                        <span id="skill_count-4" data-skills_percent="5440">+</span>
-                        <h4>Clients</h4>
+                        <span id="skill_count-4" th:attr="data-skills_percent=${transCount}">+</span>
+                        <h4>Transf</h4>
                     </div>
                 </div>
             </div><!-- Container /- -->
@@ -678,7 +685,7 @@
                     <div class="item">
                         <div class="team-box">
                             <img src="assets/images/team-1.jpg" alt="Team"/>
-                            <h3>Alan Dark</h3>
+                            <h3>Eugeniu Efros</h3>
                             <span>designer</span>
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
@@ -690,8 +697,8 @@
                     </div>
                     <div class="item">
                         <div class="team-box">
-                            <img src="assets/images/team-2.jpg" alt="Team"/>
-                            <h3>Knox Ulmar</h3>
+                            <img src="assets/images/team-1.jpg" alt="Team"/>
+                            <h3>Eugeniu Efros</h3>
                             <span>Finance</span>
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
@@ -703,8 +710,8 @@
                     </div>
                     <div class="item">
                         <div class="team-box">
-                            <img src="assets/images/team-3.jpg" alt="Team"/>
-                            <h3>Jeremy Duncan</h3>
+                            <img src="assets/images/team-1.jpg" alt="Team"/>
+                            <h3>Eugeniu Efros</h3>
                             <span>Developer</span>
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
@@ -716,8 +723,8 @@
                     </div>
                     <div class="item">
                         <div class="team-box">
-                            <img src="assets/images/team-4.jpg" alt="Team"/>
-                            <h3>Tedd Justice</h3>
+                            <img src="assets/images/team-1.jpg" alt="Team"/>
+                            <h3>Eugeniu Efros</h3>
                             <span>seo</span>
                             <ul>
                                 <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>

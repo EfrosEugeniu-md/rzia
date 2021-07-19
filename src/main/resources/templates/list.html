@@ -15,15 +15,29 @@
         <!-- Container -->
         <div class="container">
             <div class="page-title">
-                <h3>Blog</h3>
+                <h3>List of stations</h3>
             </div>
             <ol class="breadcrumb">
                 <li><a href="index.html">home</a></li>
                 <li><a href="list.html">list</a></li>
                 <li class="active">list stations</li>
             </ol>
+
+            <aside class="widget widget_search">
+                <form method="get" class="searchform" action="#">
+                    <div class="input-group">
+                        <input id="input-group" placeholder="Search Here"
+                               class="form-control" required="" type="text" th:onchange="moveToIdStation()"/>
+                        <span class="input-group-btn">
+											<button class="btn btn-default" th:onclick="moveToIdStation()"><i
+                                                    class="fa fa-search"></i></button>
+										</span>
+                    </div>
+                </form>
+            </aside><!-- Widget: Search /- -->
         </div><!-- Container /- -->
     </div><!-- Page Banner /- -->
+
 
     <main class="site-main">
 
@@ -36,14 +50,8 @@
                     <!-- Content Area -->
                     <div class="col-md-9 col-sm-8 content-area">
                         <div th:each="station: ${list}">
-                            <div class="type-post">
+                            <div th:id="${station.getTpNumber()}" class="type-post">
                                 <div class="entry-cover">
-                                    <!--										<a href="list-consumer.html">-->
-                                    <!--											<img src="assets/images/blog-post-1.jpg" alt="Blog" />-->
-                                    <!--										</a>-->
-                                    <!--                                    <div class="post-meta">-->
-                                    <!--                                        <a href="#"><span th:text="${station.getTpNumber()}">18</span>St.</a>-->
-                                    <!--                                    </div>-->
                                 </div>
                                 <div class="entry-content">
                                     <div class="entry-header">
@@ -55,12 +63,12 @@
                                             </a></h3>
                                         <div class="entry-meta">
                                             <span><i class="fa fa-user-o"></i>
-												<a href="#">
+												<a th:href="@{'/pdf?type=CONS&id=' + ${station.getTpNumber()} }" target="_blank">
 													<span th:text="${station.getConsumers().size()}">4 </span>Lines
 												</a></span>
                                             <span><i class="fa fa-clock-o"></i><a href="#">1978 year</a></span>
                                             <span><i class="fa fa-commenting-o"></i>
-												<a href="#">
+												<a th:href="@{'/pdf?type=CELL&id=' + ${station.getTpNumber()} }" target="_blank">
 													<span th:text="${station.getStationAndCellulars().size()}">4 </span>Cellulars
 												</a></span>
                                         </div>
@@ -68,38 +76,19 @@
                                     <ol th:each="celula: ${station.getStationAndCellulars()}">
                                         <li>
                                             <a th:href="@{'/list.html/' + ${celula.getId().toString()}}">
-                                                <span th:text="${celula.getId().getIc()}">4 </span>Cellula
+                                                <span th:text="${celula.getTpIc().getIc()}">4 </span>Cellula
                                             </a></span>
                                         </li>
                                     </ol>
-                                    <a th:href="@{'/list.html/' + ${station.getTpNumber()}}" >detail</a>
+                                    <a th:href="@{'/list.html/' + ${station.getTpNumber()}}">detail</a>
+                                    <a href="#">back</a>
                                 </div>
                             </div>
                         </div>
-
-                        <nav class="ow-pagination">
-                            <ul class="pagination">
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                            </ul>
-                        </nav>
                     </div><!-- Content Area /- -->
 
                     <!-- Widget Area -->
                     <div class="col-md-3 col-sm-4 widget-area">
-                        <!-- Widget : Search -->
-                        <aside class="widget widget_search">
-                            <form method="get" class="searchform" action="#">
-                                <div class="input-group">
-                                    <input placeholder="Search Here" class="form-control" required="" type="text"/>
-                                    <span class="input-group-btn">
-											<button class="btn btn-default" type="submit"><i
-                                                    class="fa fa-search"></i></button>
-										</span>
-                                </div>
-                            </form>
-                        </aside><!-- Widget: Search /- -->
                         <!-- Widget : Categories -->
                         <aside id="categories" class="widget widget_categories">
                             <h3 class="widget-title">Categories</h3>

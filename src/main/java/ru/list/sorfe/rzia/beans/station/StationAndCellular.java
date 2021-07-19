@@ -33,24 +33,25 @@ public class StationAndCellular {
     public String toString() {
 
         assert this.id != null;
-        StringBuilder stringBuilder = (new StringBuilder("This is " + this.id.toString()));
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("ST nr. ").append(this.tpIc.getTpNumber()).append(" iac. ").append(this.tpIc.getIc());
         if (this.typeOfSecurityElement == StCellRollPhasa.TypeOfSecurityElement.TP) {
-            stringBuilder.append("Security Element is  line off the reserve to ST").append(this.numberOfSecurityElement);
+            stringBuilder.append(" reserve to ST").append(this.numberOfSecurityElement);
         }
-
+//
         if (this.typeOfSecurityElement == StCellRollPhasa.TypeOfSecurityElement.AGR) {
-            stringBuilder.append("Security Element is aggregate nr.").append(this.numberOfSecurityElement);
+            stringBuilder.append(" aggregate nr.").append(this.numberOfSecurityElement);
         }
-
-        stringBuilder.append("\n");
-
-        for (Rely rely : this.getRelies()) {
-            stringBuilder.append(rely.toString());
-        }
-
-        for (TransformationCurrent transformationCurrent : this.getTransformationCurrents()) {
-            stringBuilder.append(transformationCurrent.toString());
-        }
+//
+//        stringBuilder.append("\n");
+//
+//        for (Rely rely : this.getRelies()) {
+//            stringBuilder.append(rely.toString());
+//        }
+//
+//        for (TransformationCurrent transformationCurrent : this.getTransformationCurrents()) {
+//            stringBuilder.append(transformationCurrent.toString());
+//        }
 
         return stringBuilder.toString();
     }
